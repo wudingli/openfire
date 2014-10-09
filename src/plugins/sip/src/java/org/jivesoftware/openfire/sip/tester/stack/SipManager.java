@@ -435,8 +435,9 @@ public class SipManager implements SipListener {
      *
      * @param serverTransaction the transaction to send the response through.
      * @param request           the request that is being answered.
+     * @throws InvalidArgumentException 
      */
-    void sendNotImplemented(ServerTransaction serverTransaction, Request request) {
+    void sendNotImplemented(ServerTransaction serverTransaction, Request request) throws InvalidArgumentException {
         Response notImplemented;
         try {
             notImplemented = messageFactory.createResponse(
@@ -456,10 +457,7 @@ public class SipManager implements SipListener {
             fireCommunicationsError(new CommunicationsException(
                     "Failed to create a NOT_IMPLEMENTED response to a "
                             + request.getMethod() + " request!", ex));
-        } catch (InvalidArgumentException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+        }
     }
 
     public void fireCommunicationsError(Throwable throwable) {

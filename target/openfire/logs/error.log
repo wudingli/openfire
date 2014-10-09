@@ -1,0 +1,1597 @@
+2014.10.08 21:19:58 org.jivesoftware.database.SchemaManager - SchemaManager: Failed to execute SQL:
+ CREATE TABLE ofGojaraStatistics (   logID 			bigint(20) NOT NULL AUTO_INCREMENT,   messageDate		bigint(20) NOT NULL,   messageType 		tinytext NOT NULL,   fromJID 			text NOT NULL,   toJID 			text NOT NULL,   component			text NOT NULL,   PRIMARY KEY (logID) );
+2014.10.08 21:19:58 org.jivesoftware.database.SchemaManager - â€œAUTO_INCREMENTâ€é™„è¿‘æœ‰è¯­æ³•é”™è¯¯ã€‚
+java.sql.SQLException: â€œAUTO_INCREMENTâ€é™„è¿‘æœ‰è¯­æ³•é”™è¯¯ã€‚
+	at net.sourceforge.jtds.jdbc.SQLDiagnostic.addDiagnostic(SQLDiagnostic.java:368)
+	at net.sourceforge.jtds.jdbc.TdsCore.tdsErrorToken(TdsCore.java:2816)
+	at net.sourceforge.jtds.jdbc.TdsCore.nextToken(TdsCore.java:2254)
+	at net.sourceforge.jtds.jdbc.TdsCore.getMoreResults(TdsCore.java:631)
+	at net.sourceforge.jtds.jdbc.JtdsStatement.processResults(JtdsStatement.java:584)
+	at net.sourceforge.jtds.jdbc.JtdsStatement.executeSQL(JtdsStatement.java:546)
+	at net.sourceforge.jtds.jdbc.JtdsPreparedStatement.execute(JtdsPreparedStatement.java:559)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.logicalcobwebs.proxool.ProxyStatement.invoke(ProxyStatement.java:100)
+	at org.logicalcobwebs.proxool.ProxyStatement.intercept(ProxyStatement.java:57)
+	at $java.sql.Wrapper$$EnhancerByProxool$$f0c488a9.execute(<generated>)
+	at org.jivesoftware.database.SchemaManager.executeSQLScript(SchemaManager.java:408)
+	at org.jivesoftware.database.SchemaManager.checkSchema(SchemaManager.java:244)
+	at org.jivesoftware.database.SchemaManager.checkPluginSchema(SchemaManager.java:136)
+	at org.jivesoftware.openfire.container.PluginManager.loadPlugin(PluginManager.java:452)
+	at org.jivesoftware.openfire.container.PluginManager.access$1(PluginManager.java:282)
+	at org.jivesoftware.openfire.container.PluginManager$PluginMonitor.run(PluginManager.java:1074)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:304)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:178)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+2014.10.08 21:19:58 org.jivesoftware.openfire.container.PluginManager - gojara - æ•°æ®åº“æ›´æ–°å¤±è´¥ã€‚è¯·æ‰‹åŠ¨å‡çº§æ‚¨çš„æ•°æ®åº“ã€‚
+2014.10.08 21:20:11 org.jivesoftware.util.CertificateManager - Error decoding subjectAltName
+java.lang.ClassCastException: org.bouncycastle.asn1.DERTaggedObject cannot be cast to org.bouncycastle.asn1.ASN1Sequence
+	at org.jivesoftware.util.CertificateManager.getSubjectAlternativeNames(CertificateManager.java:260)
+	at org.jivesoftware.util.CertificateManager.getPeerIdentities(CertificateManager.java:223)
+	at org.jivesoftware.util.CertificateManager.isCertificate(CertificateManager.java:371)
+	at org.jivesoftware.util.CertificateManager.isRSACertificate(CertificateManager.java:322)
+	at org.jivesoftware.openfire.http.HttpBindManager.createSSLConnector(HttpBindManager.java:210)
+	at org.jivesoftware.openfire.http.HttpBindManager.configureHttpBindServer(HttpBindManager.java:506)
+	at org.jivesoftware.openfire.http.HttpBindManager.start(HttpBindManager.java:163)
+	at org.jivesoftware.openfire.spi.ConnectionManagerImpl.startHTTPBindListeners(ConnectionManagerImpl.java:564)
+	at org.jivesoftware.openfire.spi.ConnectionManagerImpl.startListeners(ConnectionManagerImpl.java:180)
+	at org.jivesoftware.openfire.spi.ConnectionManagerImpl.access$0(ConnectionManagerImpl.java:139)
+	at org.jivesoftware.openfire.spi.ConnectionManagerImpl$1.pluginsMonitored(ConnectionManagerImpl.java:152)
+	at org.jivesoftware.openfire.container.PluginManager.firePluginsMonitored(PluginManager.java:568)
+	at org.jivesoftware.openfire.container.PluginManager.access$6(PluginManager.java:566)
+	at org.jivesoftware.openfire.container.PluginManager$PluginMonitor.run(PluginManager.java:1084)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:304)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:178)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+2014.10.08 21:20:11 org.jivesoftware.util.CertificateManager - Error decoding subjectAltName
+java.lang.ClassCastException: org.bouncycastle.asn1.DERTaggedObject cannot be cast to org.bouncycastle.asn1.ASN1Sequence
+	at org.jivesoftware.util.CertificateManager.getSubjectAlternativeNames(CertificateManager.java:260)
+	at org.jivesoftware.util.CertificateManager.getPeerIdentities(CertificateManager.java:223)
+	at org.jivesoftware.util.CertificateManager.isCertificate(CertificateManager.java:371)
+	at org.jivesoftware.util.CertificateManager.isRSACertificate(CertificateManager.java:322)
+	at org.jivesoftware.openfire.http.HttpBindManager.createSSLConnector(HttpBindManager.java:210)
+	at org.jivesoftware.openfire.http.HttpBindManager.configureHttpBindServer(HttpBindManager.java:506)
+	at org.jivesoftware.openfire.http.HttpBindManager.start(HttpBindManager.java:163)
+	at org.jivesoftware.openfire.spi.ConnectionManagerImpl.startHTTPBindListeners(ConnectionManagerImpl.java:564)
+	at org.jivesoftware.openfire.spi.ConnectionManagerImpl.startListeners(ConnectionManagerImpl.java:180)
+	at org.jivesoftware.openfire.spi.ConnectionManagerImpl.access$0(ConnectionManagerImpl.java:139)
+	at org.jivesoftware.openfire.spi.ConnectionManagerImpl$1.pluginsMonitored(ConnectionManagerImpl.java:152)
+	at org.jivesoftware.openfire.container.PluginManager.firePluginsMonitored(PluginManager.java:568)
+	at org.jivesoftware.openfire.container.PluginManager.access$6(PluginManager.java:566)
+	at org.jivesoftware.openfire.container.PluginManager$PluginMonitor.run(PluginManager.java:1084)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:304)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:178)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+2014.10.08 21:21:58 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: å¯¹è±¡å 'ofGojaraStatistics' æ— æ•ˆã€‚
+2014.10.08 21:22:14 org.jivesoftware.database.SchemaManager - SchemaManager: Failed to execute SQL:
+ CREATE TABLE ofGojaraStatistics (   logID 			bigint(20) NOT NULL AUTO_INCREMENT,   messageDate		bigint(20) NOT NULL,   messageType 		tinytext NOT NULL,   fromJID 			text NOT NULL,   toJID 			text NOT NULL,   component			text NOT NULL,   PRIMARY KEY (logID) );
+2014.10.08 21:22:14 org.jivesoftware.database.SchemaManager - â€œAUTO_INCREMENTâ€é™„è¿‘æœ‰è¯­æ³•é”™è¯¯ã€‚
+java.sql.SQLException: â€œAUTO_INCREMENTâ€é™„è¿‘æœ‰è¯­æ³•é”™è¯¯ã€‚
+	at net.sourceforge.jtds.jdbc.SQLDiagnostic.addDiagnostic(SQLDiagnostic.java:368)
+	at net.sourceforge.jtds.jdbc.TdsCore.tdsErrorToken(TdsCore.java:2816)
+	at net.sourceforge.jtds.jdbc.TdsCore.nextToken(TdsCore.java:2254)
+	at net.sourceforge.jtds.jdbc.TdsCore.getMoreResults(TdsCore.java:631)
+	at net.sourceforge.jtds.jdbc.JtdsStatement.processResults(JtdsStatement.java:584)
+	at net.sourceforge.jtds.jdbc.JtdsStatement.executeSQL(JtdsStatement.java:546)
+	at net.sourceforge.jtds.jdbc.JtdsPreparedStatement.execute(JtdsPreparedStatement.java:559)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.logicalcobwebs.proxool.ProxyStatement.invoke(ProxyStatement.java:100)
+	at org.logicalcobwebs.proxool.ProxyStatement.intercept(ProxyStatement.java:57)
+	at $java.sql.Statement$$EnhancerByProxool$$6d9ce501.execute(<generated>)
+	at org.jivesoftware.database.SchemaManager.executeSQLScript(SchemaManager.java:408)
+	at org.jivesoftware.database.SchemaManager.checkSchema(SchemaManager.java:244)
+	at org.jivesoftware.database.SchemaManager.checkPluginSchema(SchemaManager.java:136)
+	at org.jivesoftware.openfire.container.PluginManager.loadPlugin(PluginManager.java:452)
+	at org.jivesoftware.openfire.container.PluginManager.access$1(PluginManager.java:282)
+	at org.jivesoftware.openfire.container.PluginManager$PluginMonitor.run(PluginManager.java:1074)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:304)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:178)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+2014.10.08 21:22:14 org.jivesoftware.openfire.container.PluginManager - gojara - æ•°æ®åº“æ›´æ–°å¤±è´¥ã€‚è¯·æ‰‹åŠ¨å‡çº§æ‚¨çš„æ•°æ®åº“ã€‚
+2014.10.08 21:22:51 org.jivesoftware.database.SchemaManager - SchemaManager: Failed to execute SQL:
+ CREATE TABLE ofGojaraStatistics (   logID 			bigint(20) NOT NULL AUTO_INCREMENT,   messageDate		bigint(20) NOT NULL,   messageType 		tinytext NOT NULL,   fromJID 			text NOT NULL,   toJID 			text NOT NULL,   component			text NOT NULL,   PRIMARY KEY (logID) );
+2014.10.08 21:22:51 org.jivesoftware.database.SchemaManager - ¡°AUTO_INCREMENT¡±¸½½üÓĞÓï·¨´íÎó¡£
+java.sql.SQLException: ¡°AUTO_INCREMENT¡±¸½½üÓĞÓï·¨´íÎó¡£
+	at net.sourceforge.jtds.jdbc.SQLDiagnostic.addDiagnostic(SQLDiagnostic.java:368)
+	at net.sourceforge.jtds.jdbc.TdsCore.tdsErrorToken(TdsCore.java:2816)
+	at net.sourceforge.jtds.jdbc.TdsCore.nextToken(TdsCore.java:2254)
+	at net.sourceforge.jtds.jdbc.TdsCore.getMoreResults(TdsCore.java:631)
+	at net.sourceforge.jtds.jdbc.JtdsStatement.processResults(JtdsStatement.java:584)
+	at net.sourceforge.jtds.jdbc.JtdsStatement.executeSQL(JtdsStatement.java:546)
+	at net.sourceforge.jtds.jdbc.JtdsPreparedStatement.execute(JtdsPreparedStatement.java:559)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.logicalcobwebs.proxool.ProxyStatement.invoke(ProxyStatement.java:100)
+	at org.logicalcobwebs.proxool.ProxyStatement.intercept(ProxyStatement.java:57)
+	at $java.sql.Statement$$EnhancerByProxool$$ad12e8d.execute(<generated>)
+	at org.jivesoftware.database.SchemaManager.executeSQLScript(SchemaManager.java:408)
+	at org.jivesoftware.database.SchemaManager.checkSchema(SchemaManager.java:244)
+	at org.jivesoftware.database.SchemaManager.checkPluginSchema(SchemaManager.java:136)
+	at org.jivesoftware.openfire.container.PluginManager.loadPlugin(PluginManager.java:452)
+	at org.jivesoftware.openfire.container.PluginManager.access$300(PluginManager.java:80)
+	at org.jivesoftware.openfire.container.PluginManager$PluginMonitor.run(PluginManager.java:1074)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:304)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:178)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+2014.10.08 21:22:51 org.jivesoftware.openfire.container.PluginManager - gojara - Êı¾İ¿â¸üĞÂÊ§°Ü¡£ÇëÊÖ¶¯Éı¼¶ÄúµÄÊı¾İ¿â¡£
+2014.10.08 21:24:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.08 21:26:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.08 21:28:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.08 21:30:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.08 21:32:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.08 21:34:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.08 21:36:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.08 21:38:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.08 21:40:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.08 21:42:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.08 21:44:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.08 21:46:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.08 21:48:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.08 21:50:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.08 21:52:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.08 21:54:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.08 21:56:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.08 21:58:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.08 22:00:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.08 22:02:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.08 22:04:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.08 22:06:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.08 22:08:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.08 22:10:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.08 22:12:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.08 22:14:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.08 22:16:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.08 22:18:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.08 22:20:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.08 22:22:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.08 22:24:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.08 22:26:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.08 22:28:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.08 22:30:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.08 22:32:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.08 22:34:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.08 22:36:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.08 22:38:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.08 22:40:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.08 22:42:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.08 22:44:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.08 22:46:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.08 22:48:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.08 22:50:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.08 22:52:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.08 22:54:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.08 22:56:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.08 22:58:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.08 23:00:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.08 23:02:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.08 23:04:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.08 23:06:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.08 23:08:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.08 23:10:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.08 23:12:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.08 23:14:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.08 23:16:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.08 23:18:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.08 23:20:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.08 23:22:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.08 23:24:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.08 23:26:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.08 23:28:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.08 23:30:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.08 23:32:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.08 23:34:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.08 23:36:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.08 23:38:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.08 23:40:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.08 23:42:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.08 23:44:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.08 23:46:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.08 23:48:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.08 23:50:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.08 23:52:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.08 23:54:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.08 23:56:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.08 23:58:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 00:00:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 00:02:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 00:04:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 00:06:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 00:08:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 00:10:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 00:12:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 00:14:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 00:16:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 00:18:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 00:20:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 00:22:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 00:24:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 00:26:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 00:28:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 00:30:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 00:32:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 00:34:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 00:36:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 00:38:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 00:40:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 00:42:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 00:44:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 00:46:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 00:48:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 00:50:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 00:52:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 00:54:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 00:56:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 00:58:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 01:00:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 01:02:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 01:04:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 01:06:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 01:08:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 01:10:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 01:12:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 01:14:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 01:16:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 01:18:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 01:20:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 01:22:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 01:24:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 01:26:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 01:28:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 01:30:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 01:32:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 01:34:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 01:36:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 01:38:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 01:40:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 01:42:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 01:44:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 01:46:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 01:48:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 01:50:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 01:52:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 01:54:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 01:56:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 01:58:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 02:00:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 02:02:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 02:04:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 02:06:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 02:08:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 02:10:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 02:12:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 02:14:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 02:16:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 02:18:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 02:20:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 02:22:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 02:24:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 02:26:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 02:28:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 02:30:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 02:32:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 02:34:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 02:36:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 02:38:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 02:40:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 02:42:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 02:44:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 02:46:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 02:48:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 02:50:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 02:52:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 02:54:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 02:56:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 02:58:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 03:00:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 03:02:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 03:04:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 03:06:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 03:08:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 03:10:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 03:12:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 03:14:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 03:16:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 03:18:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 03:20:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 03:22:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 03:24:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 03:26:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 03:28:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 03:30:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 03:32:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 03:34:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 03:36:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 03:38:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 03:40:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 03:42:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 03:44:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 03:46:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 03:48:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 03:50:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 03:52:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 03:54:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 03:56:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 03:58:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 04:00:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 04:02:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 04:04:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 04:06:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 04:08:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 04:10:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 04:12:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 04:14:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 04:16:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 04:18:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 04:20:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 04:22:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 04:24:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 04:26:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 04:28:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 04:30:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 04:32:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 04:34:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 04:36:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 04:38:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 04:40:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 04:42:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 04:44:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 04:46:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 04:48:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 04:50:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 04:52:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 04:54:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 04:56:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 04:58:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 05:00:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 05:02:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 05:04:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 05:06:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 05:08:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 05:10:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 05:12:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 05:14:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 05:16:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 05:18:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 05:20:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 05:22:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 05:24:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 05:26:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 05:28:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 05:30:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 05:32:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 05:34:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 05:36:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 05:38:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 05:40:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 05:42:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 05:44:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 05:46:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 05:48:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 05:50:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 05:52:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 05:54:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 05:56:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 05:58:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 06:00:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 06:02:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 06:04:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 06:06:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 06:08:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 06:10:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 06:12:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 06:14:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 06:16:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 06:18:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 06:20:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 06:22:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 06:24:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 06:26:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 06:28:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 06:30:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 06:32:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 06:34:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 06:36:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 06:38:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 06:40:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 06:42:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 06:44:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 06:46:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 06:48:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 06:50:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 06:52:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 06:54:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 06:56:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 06:58:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 07:00:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 07:02:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 07:04:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 07:06:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 07:08:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 07:10:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 07:12:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 07:14:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 07:16:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 07:18:52 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 07:20:51 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 07:22:52 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 07:24:52 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 07:26:52 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 07:28:52 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 07:30:52 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 07:32:52 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 07:34:52 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 07:36:52 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 07:38:52 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 07:40:52 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 07:42:52 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 07:44:52 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 07:46:52 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 07:48:52 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 07:50:52 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 07:52:52 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 07:54:52 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 07:56:52 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 07:58:52 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 08:00:52 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 08:02:52 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 08:04:52 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 08:06:52 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 08:08:52 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 08:10:52 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 08:12:52 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 08:14:52 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 08:16:52 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 08:18:52 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 08:20:52 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 08:22:52 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 08:24:52 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 08:26:52 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 08:28:52 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 08:30:52 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 08:32:52 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 08:35:17 org.jivesoftware.database.SchemaManager - SchemaManager: Failed to execute SQL:
+ CREATE TABLE ofGojaraStatistics (   logID 			bigint(20) NOT NULL AUTO_INCREMENT,   messageDate		bigint(20) NOT NULL,   messageType 		tinytext NOT NULL,   fromJID 			text NOT NULL,   toJID 			text NOT NULL,   component			text NOT NULL,   PRIMARY KEY (logID) );
+2014.10.09 08:35:17 org.jivesoftware.database.SchemaManager - ¡°AUTO_INCREMENT¡±¸½½üÓĞÓï·¨´íÎó¡£
+java.sql.SQLException: ¡°AUTO_INCREMENT¡±¸½½üÓĞÓï·¨´íÎó¡£
+	at net.sourceforge.jtds.jdbc.SQLDiagnostic.addDiagnostic(SQLDiagnostic.java:368)
+	at net.sourceforge.jtds.jdbc.TdsCore.tdsErrorToken(TdsCore.java:2816)
+	at net.sourceforge.jtds.jdbc.TdsCore.nextToken(TdsCore.java:2254)
+	at net.sourceforge.jtds.jdbc.TdsCore.getMoreResults(TdsCore.java:631)
+	at net.sourceforge.jtds.jdbc.JtdsStatement.processResults(JtdsStatement.java:584)
+	at net.sourceforge.jtds.jdbc.JtdsStatement.executeSQL(JtdsStatement.java:546)
+	at net.sourceforge.jtds.jdbc.JtdsPreparedStatement.execute(JtdsPreparedStatement.java:559)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.logicalcobwebs.proxool.ProxyStatement.invoke(ProxyStatement.java:100)
+	at org.logicalcobwebs.proxool.ProxyStatement.intercept(ProxyStatement.java:57)
+	at $java.sql.Statement$$EnhancerByProxool$$ad12e8d.execute(<generated>)
+	at org.jivesoftware.database.SchemaManager.executeSQLScript(SchemaManager.java:408)
+	at org.jivesoftware.database.SchemaManager.checkSchema(SchemaManager.java:244)
+	at org.jivesoftware.database.SchemaManager.checkPluginSchema(SchemaManager.java:136)
+	at org.jivesoftware.openfire.container.PluginManager.loadPlugin(PluginManager.java:452)
+	at org.jivesoftware.openfire.container.PluginManager.access$300(PluginManager.java:80)
+	at org.jivesoftware.openfire.container.PluginManager$PluginMonitor.run(PluginManager.java:1074)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:304)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:178)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+2014.10.09 08:35:17 org.jivesoftware.openfire.container.PluginManager - gojara - Êı¾İ¿â¸üĞÂÊ§°Ü¡£ÇëÊÖ¶¯Éı¼¶ÄúµÄÊı¾İ¿â¡£
+2014.10.09 08:37:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 08:39:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 08:41:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 08:43:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 08:45:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 08:47:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 08:49:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 08:51:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 08:53:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 08:55:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 08:57:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 08:59:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 09:01:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 09:03:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 09:05:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 09:07:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 09:09:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 09:11:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 09:13:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 09:15:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 09:17:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 09:19:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 09:21:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 09:23:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 09:23:39 org.jivesoftware.openfire.interceptor.InterceptorManager - Error in interceptor: org.jivesoftware.openfire.plugin.PacketFilterPlugin@3dc81f47 while intercepting: 
+<iq type="error" id="84M4c-42" to="zhudl.fuel@10.5.99.72/SHIM 2.7" from="@10.5.99.72">
+  <vCard xmlns="vcard-temp">
+    <JABBERID>@10.5.99.72</JABBERID> 
+  </vCard>
+  <error code="400" type="modify">
+    <jid-malformed xmlns="urn:ietf:params:xml:ns:xmpp-stanzas"/>
+  </error>
+</iq>
+java.lang.IllegalArgumentException: Existing at-character at the first character of the string indicates that an empty node part is provided. This is illegal. Offending value: '@10.5.99.72'
+	at org.xmpp.packet.JID.getParts(JID.java:567)
+	at org.xmpp.packet.Packet.getFrom(Packet.java:224)
+	at org.jivesoftware.openfire.plugin.PacketFilter.findMatch(PacketFilter.java:32)
+	at org.jivesoftware.openfire.plugin.PacketFilterPlugin.interceptPacket(PacketFilterPlugin.java:77)
+	at org.jivesoftware.openfire.interceptor.InterceptorManager.invokeInterceptors(InterceptorManager.java:239)
+	at org.jivesoftware.openfire.session.LocalSession.process(LocalSession.java:281)
+	at org.jivesoftware.openfire.net.StanzaHandler.process(StanzaHandler.java:285)
+	at org.jivesoftware.openfire.net.StanzaHandler.process(StanzaHandler.java:187)
+	at org.jivesoftware.openfire.nio.ConnectionHandler.messageReceived(ConnectionHandler.java:181)
+	at org.apache.mina.common.support.AbstractIoFilterChain$TailFilter.messageReceived(AbstractIoFilterChain.java:570)
+	at org.apache.mina.common.support.AbstractIoFilterChain.callNextMessageReceived(AbstractIoFilterChain.java:299)
+	at org.apache.mina.common.support.AbstractIoFilterChain.access$1100(AbstractIoFilterChain.java:53)
+	at org.apache.mina.common.support.AbstractIoFilterChain$EntryImpl$1.messageReceived(AbstractIoFilterChain.java:648)
+	at org.apache.mina.common.IoFilterAdapter.messageReceived(IoFilterAdapter.java:80)
+	at org.apache.mina.common.support.AbstractIoFilterChain.callNextMessageReceived(AbstractIoFilterChain.java:299)
+	at org.apache.mina.common.support.AbstractIoFilterChain.access$1100(AbstractIoFilterChain.java:53)
+	at org.apache.mina.common.support.AbstractIoFilterChain$EntryImpl$1.messageReceived(AbstractIoFilterChain.java:648)
+	at org.apache.mina.filter.codec.support.SimpleProtocolDecoderOutput.flush(SimpleProtocolDecoderOutput.java:58)
+	at org.apache.mina.filter.codec.ProtocolCodecFilter.messageReceived(ProtocolCodecFilter.java:185)
+	at org.apache.mina.common.support.AbstractIoFilterChain.callNextMessageReceived(AbstractIoFilterChain.java:299)
+	at org.apache.mina.common.support.AbstractIoFilterChain.access$1100(AbstractIoFilterChain.java:53)
+	at org.apache.mina.common.support.AbstractIoFilterChain$EntryImpl$1.messageReceived(AbstractIoFilterChain.java:648)
+	at org.apache.mina.common.IoFilterAdapter.messageReceived(IoFilterAdapter.java:80)
+	at org.jivesoftware.openfire.plugin.RawPrintFilter.messageReceived(RawPrintFilter.java:66)
+	at org.apache.mina.common.support.AbstractIoFilterChain.callNextMessageReceived(AbstractIoFilterChain.java:299)
+	at org.apache.mina.common.support.AbstractIoFilterChain.access$1100(AbstractIoFilterChain.java:53)
+	at org.apache.mina.common.support.AbstractIoFilterChain$EntryImpl$1.messageReceived(AbstractIoFilterChain.java:648)
+	at org.apache.mina.filter.executor.ExecutorFilter.processEvent(ExecutorFilter.java:239)
+	at org.apache.mina.filter.executor.ExecutorFilter$ProcessEventsRunnable.run(ExecutorFilter.java:283)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:51)
+	at java.lang.Thread.run(Thread.java:744)
+2014.10.09 09:25:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 09:27:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 09:29:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 09:31:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 09:33:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 09:35:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 09:37:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 09:39:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 09:41:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 09:43:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 09:45:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 09:47:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 09:49:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 09:51:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 09:53:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 09:55:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 09:57:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 09:59:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 10:01:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 10:03:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 10:05:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 10:07:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 10:09:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 10:11:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 10:13:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 10:15:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 10:17:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 10:19:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 10:21:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 10:23:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 10:25:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 10:27:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 10:29:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 10:31:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 10:33:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 10:35:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 10:37:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 10:39:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 10:41:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 10:43:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 10:45:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 10:47:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 10:49:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 10:51:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 10:53:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 10:55:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 10:57:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 10:59:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 11:01:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 11:03:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 11:05:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 11:07:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 11:09:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 11:11:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 11:13:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 11:15:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 11:16:20 org.jivesoftware.openfire.interceptor.InterceptorManager - Error in interceptor: org.jivesoftware.openfire.plugin.PacketFilterPlugin@3dc81f47 while intercepting: 
+<iq type="error" id="RhuPh-36" to="bailu.fuel@10.5.99.72/SHIM 2.7" from="@10.5.99.72">
+  <vCard xmlns="vcard-temp">
+    <JABBERID>@10.5.99.72</JABBERID> 
+  </vCard>
+  <error code="400" type="modify">
+    <jid-malformed xmlns="urn:ietf:params:xml:ns:xmpp-stanzas"/>
+  </error>
+</iq>
+java.lang.IllegalArgumentException: Existing at-character at the first character of the string indicates that an empty node part is provided. This is illegal. Offending value: '@10.5.99.72'
+	at org.xmpp.packet.JID.getParts(JID.java:567)
+	at org.xmpp.packet.Packet.getFrom(Packet.java:224)
+	at org.jivesoftware.openfire.plugin.PacketFilter.findMatch(PacketFilter.java:32)
+	at org.jivesoftware.openfire.plugin.PacketFilterPlugin.interceptPacket(PacketFilterPlugin.java:77)
+	at org.jivesoftware.openfire.interceptor.InterceptorManager.invokeInterceptors(InterceptorManager.java:239)
+	at org.jivesoftware.openfire.session.LocalSession.process(LocalSession.java:281)
+	at org.jivesoftware.openfire.net.StanzaHandler.process(StanzaHandler.java:285)
+	at org.jivesoftware.openfire.net.StanzaHandler.process(StanzaHandler.java:187)
+	at org.jivesoftware.openfire.nio.ConnectionHandler.messageReceived(ConnectionHandler.java:181)
+	at org.apache.mina.common.support.AbstractIoFilterChain$TailFilter.messageReceived(AbstractIoFilterChain.java:570)
+	at org.apache.mina.common.support.AbstractIoFilterChain.callNextMessageReceived(AbstractIoFilterChain.java:299)
+	at org.apache.mina.common.support.AbstractIoFilterChain.access$1100(AbstractIoFilterChain.java:53)
+	at org.apache.mina.common.support.AbstractIoFilterChain$EntryImpl$1.messageReceived(AbstractIoFilterChain.java:648)
+	at org.apache.mina.common.IoFilterAdapter.messageReceived(IoFilterAdapter.java:80)
+	at org.apache.mina.common.support.AbstractIoFilterChain.callNextMessageReceived(AbstractIoFilterChain.java:299)
+	at org.apache.mina.common.support.AbstractIoFilterChain.access$1100(AbstractIoFilterChain.java:53)
+	at org.apache.mina.common.support.AbstractIoFilterChain$EntryImpl$1.messageReceived(AbstractIoFilterChain.java:648)
+	at org.apache.mina.filter.codec.support.SimpleProtocolDecoderOutput.flush(SimpleProtocolDecoderOutput.java:58)
+	at org.apache.mina.filter.codec.ProtocolCodecFilter.messageReceived(ProtocolCodecFilter.java:185)
+	at org.apache.mina.common.support.AbstractIoFilterChain.callNextMessageReceived(AbstractIoFilterChain.java:299)
+	at org.apache.mina.common.support.AbstractIoFilterChain.access$1100(AbstractIoFilterChain.java:53)
+	at org.apache.mina.common.support.AbstractIoFilterChain$EntryImpl$1.messageReceived(AbstractIoFilterChain.java:648)
+	at org.apache.mina.common.IoFilterAdapter.messageReceived(IoFilterAdapter.java:80)
+	at org.jivesoftware.openfire.plugin.RawPrintFilter.messageReceived(RawPrintFilter.java:66)
+	at org.apache.mina.common.support.AbstractIoFilterChain.callNextMessageReceived(AbstractIoFilterChain.java:299)
+	at org.apache.mina.common.support.AbstractIoFilterChain.access$1100(AbstractIoFilterChain.java:53)
+	at org.apache.mina.common.support.AbstractIoFilterChain$EntryImpl$1.messageReceived(AbstractIoFilterChain.java:648)
+	at org.apache.mina.filter.executor.ExecutorFilter.processEvent(ExecutorFilter.java:239)
+	at org.apache.mina.filter.executor.ExecutorFilter$ProcessEventsRunnable.run(ExecutorFilter.java:283)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:51)
+	at java.lang.Thread.run(Thread.java:744)
+2014.10.09 11:17:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 11:19:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 11:21:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 11:23:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 11:24:25 org.jivesoftware.openfire.interceptor.InterceptorManager - Error in interceptor: org.jivesoftware.openfire.plugin.PacketFilterPlugin@3dc81f47 while intercepting: 
+<iq type="error" id="4SuId-43" to="test1@10.5.99.72/SHIM 2.7" from="@10.5.99.72">
+  <vCard xmlns="vcard-temp">
+    <JABBERID>@10.5.99.72</JABBERID> 
+  </vCard>
+  <error code="400" type="modify">
+    <jid-malformed xmlns="urn:ietf:params:xml:ns:xmpp-stanzas"/>
+  </error>
+</iq>
+java.lang.IllegalArgumentException: Existing at-character at the first character of the string indicates that an empty node part is provided. This is illegal. Offending value: '@10.5.99.72'
+	at org.xmpp.packet.JID.getParts(JID.java:567)
+	at org.xmpp.packet.Packet.getFrom(Packet.java:224)
+	at org.jivesoftware.openfire.plugin.PacketFilter.findMatch(PacketFilter.java:32)
+	at org.jivesoftware.openfire.plugin.PacketFilterPlugin.interceptPacket(PacketFilterPlugin.java:77)
+	at org.jivesoftware.openfire.interceptor.InterceptorManager.invokeInterceptors(InterceptorManager.java:239)
+	at org.jivesoftware.openfire.session.LocalSession.process(LocalSession.java:281)
+	at org.jivesoftware.openfire.net.StanzaHandler.process(StanzaHandler.java:285)
+	at org.jivesoftware.openfire.net.StanzaHandler.process(StanzaHandler.java:187)
+	at org.jivesoftware.openfire.nio.ConnectionHandler.messageReceived(ConnectionHandler.java:181)
+	at org.apache.mina.common.support.AbstractIoFilterChain$TailFilter.messageReceived(AbstractIoFilterChain.java:570)
+	at org.apache.mina.common.support.AbstractIoFilterChain.callNextMessageReceived(AbstractIoFilterChain.java:299)
+	at org.apache.mina.common.support.AbstractIoFilterChain.access$1100(AbstractIoFilterChain.java:53)
+	at org.apache.mina.common.support.AbstractIoFilterChain$EntryImpl$1.messageReceived(AbstractIoFilterChain.java:648)
+	at org.apache.mina.common.IoFilterAdapter.messageReceived(IoFilterAdapter.java:80)
+	at org.apache.mina.common.support.AbstractIoFilterChain.callNextMessageReceived(AbstractIoFilterChain.java:299)
+	at org.apache.mina.common.support.AbstractIoFilterChain.access$1100(AbstractIoFilterChain.java:53)
+	at org.apache.mina.common.support.AbstractIoFilterChain$EntryImpl$1.messageReceived(AbstractIoFilterChain.java:648)
+	at org.apache.mina.filter.codec.support.SimpleProtocolDecoderOutput.flush(SimpleProtocolDecoderOutput.java:58)
+	at org.apache.mina.filter.codec.ProtocolCodecFilter.messageReceived(ProtocolCodecFilter.java:185)
+	at org.apache.mina.common.support.AbstractIoFilterChain.callNextMessageReceived(AbstractIoFilterChain.java:299)
+	at org.apache.mina.common.support.AbstractIoFilterChain.access$1100(AbstractIoFilterChain.java:53)
+	at org.apache.mina.common.support.AbstractIoFilterChain$EntryImpl$1.messageReceived(AbstractIoFilterChain.java:648)
+	at org.apache.mina.common.IoFilterAdapter.messageReceived(IoFilterAdapter.java:80)
+	at org.jivesoftware.openfire.plugin.RawPrintFilter.messageReceived(RawPrintFilter.java:66)
+	at org.apache.mina.common.support.AbstractIoFilterChain.callNextMessageReceived(AbstractIoFilterChain.java:299)
+	at org.apache.mina.common.support.AbstractIoFilterChain.access$1100(AbstractIoFilterChain.java:53)
+	at org.apache.mina.common.support.AbstractIoFilterChain$EntryImpl$1.messageReceived(AbstractIoFilterChain.java:648)
+	at org.apache.mina.filter.executor.ExecutorFilter.processEvent(ExecutorFilter.java:239)
+	at org.apache.mina.filter.executor.ExecutorFilter$ProcessEventsRunnable.run(ExecutorFilter.java:283)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:51)
+	at java.lang.Thread.run(Thread.java:744)
+2014.10.09 11:25:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 11:27:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 11:29:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 11:31:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 11:33:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 11:35:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 11:37:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 11:39:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 11:41:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 11:43:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 11:45:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 11:47:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 11:49:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 11:51:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 11:53:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 11:55:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 11:57:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 11:59:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 12:01:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 12:03:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 12:05:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 12:07:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 12:09:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 12:11:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 12:13:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 12:15:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 12:17:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 12:19:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 12:21:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 12:23:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 12:25:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 12:27:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 12:29:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 12:31:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 12:33:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 12:35:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 12:37:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 12:39:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 12:41:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 12:43:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 12:45:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 12:47:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 12:49:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 12:51:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 12:53:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 12:55:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 12:57:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 12:59:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 13:01:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 13:03:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 13:05:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 13:07:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 13:09:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 13:11:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 13:13:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 13:15:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 13:17:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 13:19:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 13:21:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 13:23:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 13:25:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 13:27:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 13:29:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 13:31:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 13:33:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 13:35:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 13:37:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 13:39:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 13:41:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 13:43:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 13:45:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 13:47:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 13:49:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 13:51:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 13:53:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 13:55:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 13:57:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 13:59:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 14:01:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 14:03:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 14:05:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 14:07:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 14:09:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 14:11:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 14:13:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 14:15:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 14:17:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 14:19:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 14:21:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 14:23:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 14:25:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 14:27:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 14:29:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 14:31:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 14:33:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 14:35:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 14:37:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 14:39:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 14:41:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 14:43:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 14:45:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 14:47:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 14:49:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 14:51:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 14:53:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 14:55:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 14:57:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 14:59:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 15:01:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 15:01:44 org.jivesoftware.openfire.roster.DefaultRosterItemProvider - INSERT Óï¾äÓë FOREIGN KEY Ô¼Êø"ofRosterGroups_rosterID_fk"³åÍ»¡£¸Ã³åÍ»·¢ÉúÓÚÊı¾İ¿â"DebugOpenfire"£¬±í"dbo.ofRoster", column 'rosterID'¡£
+java.sql.SQLException: INSERT Óï¾äÓë FOREIGN KEY Ô¼Êø"ofRosterGroups_rosterID_fk"³åÍ»¡£¸Ã³åÍ»·¢ÉúÓÚÊı¾İ¿â"DebugOpenfire"£¬±í"dbo.ofRoster", column 'rosterID'¡£
+	at net.sourceforge.jtds.jdbc.SQLDiagnostic.addDiagnostic(SQLDiagnostic.java:368)
+	at net.sourceforge.jtds.jdbc.TdsCore.tdsErrorToken(TdsCore.java:2816)
+	at net.sourceforge.jtds.jdbc.TdsCore.nextToken(TdsCore.java:2254)
+	at net.sourceforge.jtds.jdbc.TdsCore.getMoreResults(TdsCore.java:631)
+	at net.sourceforge.jtds.jdbc.JtdsStatement.processResults(JtdsStatement.java:584)
+	at net.sourceforge.jtds.jdbc.JtdsStatement.executeSQL(JtdsStatement.java:546)
+	at net.sourceforge.jtds.jdbc.JtdsPreparedStatement.executeUpdate(JtdsPreparedStatement.java:505)
+	at sun.reflect.GeneratedMethodAccessor14.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.logicalcobwebs.proxool.ProxyStatement.invoke(ProxyStatement.java:100)
+	at org.logicalcobwebs.proxool.ProxyStatement.intercept(ProxyStatement.java:57)
+	at $java.sql.Statement$$EnhancerByProxool$$ad12e8d.executeUpdate(<generated>)
+	at org.jivesoftware.openfire.roster.DefaultRosterItemProvider.insertGroups(DefaultRosterItemProvider.java:308)
+	at org.jivesoftware.openfire.roster.DefaultRosterItemProvider.updateItem(DefaultRosterItemProvider.java:141)
+	at org.jivesoftware.openfire.roster.Roster.updateRosterItem(Roster.java:420)
+	at org.jivesoftware.openfire.handler.PresenceSubscribeHandler.manageSub(PresenceSubscribeHandler.java:302)
+	at org.jivesoftware.openfire.handler.PresenceSubscribeHandler.process(PresenceSubscribeHandler.java:162)
+	at org.jivesoftware.openfire.PresenceRouter.handle(PresenceRouter.java:180)
+	at org.jivesoftware.openfire.PresenceRouter.route(PresenceRouter.java:84)
+	at org.jivesoftware.openfire.spi.PacketRouterImpl.route(PacketRouterImpl.java:84)
+	at org.jivesoftware.openfire.net.StanzaHandler.processPresence(StanzaHandler.java:348)
+	at org.jivesoftware.openfire.net.ClientStanzaHandler.processPresence(ClientStanzaHandler.java:100)
+	at org.jivesoftware.openfire.net.StanzaHandler.process(StanzaHandler.java:265)
+	at org.jivesoftware.openfire.net.StanzaHandler.process(StanzaHandler.java:187)
+	at org.jivesoftware.openfire.nio.ConnectionHandler.messageReceived(ConnectionHandler.java:181)
+	at org.apache.mina.common.support.AbstractIoFilterChain$TailFilter.messageReceived(AbstractIoFilterChain.java:570)
+	at org.apache.mina.common.support.AbstractIoFilterChain.callNextMessageReceived(AbstractIoFilterChain.java:299)
+	at org.apache.mina.common.support.AbstractIoFilterChain.access$1100(AbstractIoFilterChain.java:53)
+	at org.apache.mina.common.support.AbstractIoFilterChain$EntryImpl$1.messageReceived(AbstractIoFilterChain.java:648)
+	at org.apache.mina.common.IoFilterAdapter.messageReceived(IoFilterAdapter.java:80)
+	at org.apache.mina.common.support.AbstractIoFilterChain.callNextMessageReceived(AbstractIoFilterChain.java:299)
+	at org.apache.mina.common.support.AbstractIoFilterChain.access$1100(AbstractIoFilterChain.java:53)
+	at org.apache.mina.common.support.AbstractIoFilterChain$EntryImpl$1.messageReceived(AbstractIoFilterChain.java:648)
+	at org.apache.mina.filter.codec.support.SimpleProtocolDecoderOutput.flush(SimpleProtocolDecoderOutput.java:58)
+	at org.apache.mina.filter.codec.ProtocolCodecFilter.messageReceived(ProtocolCodecFilter.java:185)
+	at org.apache.mina.common.support.AbstractIoFilterChain.callNextMessageReceived(AbstractIoFilterChain.java:299)
+	at org.apache.mina.common.support.AbstractIoFilterChain.access$1100(AbstractIoFilterChain.java:53)
+	at org.apache.mina.common.support.AbstractIoFilterChain$EntryImpl$1.messageReceived(AbstractIoFilterChain.java:648)
+	at org.apache.mina.common.IoFilterAdapter.messageReceived(IoFilterAdapter.java:80)
+	at org.jivesoftware.openfire.plugin.RawPrintFilter.messageReceived(RawPrintFilter.java:66)
+	at org.apache.mina.common.support.AbstractIoFilterChain.callNextMessageReceived(AbstractIoFilterChain.java:299)
+	at org.apache.mina.common.support.AbstractIoFilterChain.access$1100(AbstractIoFilterChain.java:53)
+	at org.apache.mina.common.support.AbstractIoFilterChain$EntryImpl$1.messageReceived(AbstractIoFilterChain.java:648)
+	at org.apache.mina.filter.executor.ExecutorFilter.processEvent(ExecutorFilter.java:239)
+	at org.apache.mina.filter.executor.ExecutorFilter$ProcessEventsRunnable.run(ExecutorFilter.java:283)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:51)
+	at java.lang.Thread.run(Thread.java:744)
+2014.10.09 15:01:44 org.jivesoftware.openfire.roster.DefaultRosterItemProvider - INSERT Óï¾äÓë FOREIGN KEY Ô¼Êø"ofRosterGroups_rosterID_fk"³åÍ»¡£¸Ã³åÍ»·¢ÉúÓÚÊı¾İ¿â"DebugOpenfire"£¬±í"dbo.ofRoster", column 'rosterID'¡£
+java.sql.SQLException: INSERT Óï¾äÓë FOREIGN KEY Ô¼Êø"ofRosterGroups_rosterID_fk"³åÍ»¡£¸Ã³åÍ»·¢ÉúÓÚÊı¾İ¿â"DebugOpenfire"£¬±í"dbo.ofRoster", column 'rosterID'¡£
+	at net.sourceforge.jtds.jdbc.SQLDiagnostic.addDiagnostic(SQLDiagnostic.java:368)
+	at net.sourceforge.jtds.jdbc.TdsCore.tdsErrorToken(TdsCore.java:2816)
+	at net.sourceforge.jtds.jdbc.TdsCore.nextToken(TdsCore.java:2254)
+	at net.sourceforge.jtds.jdbc.TdsCore.getMoreResults(TdsCore.java:631)
+	at net.sourceforge.jtds.jdbc.JtdsStatement.processResults(JtdsStatement.java:584)
+	at net.sourceforge.jtds.jdbc.JtdsStatement.executeSQL(JtdsStatement.java:546)
+	at net.sourceforge.jtds.jdbc.JtdsPreparedStatement.executeUpdate(JtdsPreparedStatement.java:505)
+	at sun.reflect.GeneratedMethodAccessor14.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.logicalcobwebs.proxool.ProxyStatement.invoke(ProxyStatement.java:100)
+	at org.logicalcobwebs.proxool.ProxyStatement.intercept(ProxyStatement.java:57)
+	at $java.sql.Statement$$EnhancerByProxool$$ad12e8d.executeUpdate(<generated>)
+	at org.jivesoftware.openfire.roster.DefaultRosterItemProvider.insertGroups(DefaultRosterItemProvider.java:308)
+	at org.jivesoftware.openfire.roster.DefaultRosterItemProvider.updateItem(DefaultRosterItemProvider.java:141)
+	at org.jivesoftware.openfire.roster.Roster.updateRosterItem(Roster.java:420)
+	at org.jivesoftware.openfire.handler.PresenceSubscribeHandler.manageSub(PresenceSubscribeHandler.java:302)
+	at org.jivesoftware.openfire.handler.PresenceSubscribeHandler.process(PresenceSubscribeHandler.java:162)
+	at org.jivesoftware.openfire.PresenceRouter.handle(PresenceRouter.java:180)
+	at org.jivesoftware.openfire.PresenceRouter.route(PresenceRouter.java:84)
+	at org.jivesoftware.openfire.spi.PacketRouterImpl.route(PacketRouterImpl.java:84)
+	at org.jivesoftware.openfire.net.StanzaHandler.processPresence(StanzaHandler.java:348)
+	at org.jivesoftware.openfire.net.ClientStanzaHandler.processPresence(ClientStanzaHandler.java:100)
+	at org.jivesoftware.openfire.net.StanzaHandler.process(StanzaHandler.java:265)
+	at org.jivesoftware.openfire.net.StanzaHandler.process(StanzaHandler.java:187)
+	at org.jivesoftware.openfire.nio.ConnectionHandler.messageReceived(ConnectionHandler.java:181)
+	at org.apache.mina.common.support.AbstractIoFilterChain$TailFilter.messageReceived(AbstractIoFilterChain.java:570)
+	at org.apache.mina.common.support.AbstractIoFilterChain.callNextMessageReceived(AbstractIoFilterChain.java:299)
+	at org.apache.mina.common.support.AbstractIoFilterChain.access$1100(AbstractIoFilterChain.java:53)
+	at org.apache.mina.common.support.AbstractIoFilterChain$EntryImpl$1.messageReceived(AbstractIoFilterChain.java:648)
+	at org.apache.mina.common.IoFilterAdapter.messageReceived(IoFilterAdapter.java:80)
+	at org.apache.mina.common.support.AbstractIoFilterChain.callNextMessageReceived(AbstractIoFilterChain.java:299)
+	at org.apache.mina.common.support.AbstractIoFilterChain.access$1100(AbstractIoFilterChain.java:53)
+	at org.apache.mina.common.support.AbstractIoFilterChain$EntryImpl$1.messageReceived(AbstractIoFilterChain.java:648)
+	at org.apache.mina.filter.codec.support.SimpleProtocolDecoderOutput.flush(SimpleProtocolDecoderOutput.java:58)
+	at org.apache.mina.filter.codec.ProtocolCodecFilter.messageReceived(ProtocolCodecFilter.java:185)
+	at org.apache.mina.common.support.AbstractIoFilterChain.callNextMessageReceived(AbstractIoFilterChain.java:299)
+	at org.apache.mina.common.support.AbstractIoFilterChain.access$1100(AbstractIoFilterChain.java:53)
+	at org.apache.mina.common.support.AbstractIoFilterChain$EntryImpl$1.messageReceived(AbstractIoFilterChain.java:648)
+	at org.apache.mina.common.IoFilterAdapter.messageReceived(IoFilterAdapter.java:80)
+	at org.jivesoftware.openfire.plugin.RawPrintFilter.messageReceived(RawPrintFilter.java:66)
+	at org.apache.mina.common.support.AbstractIoFilterChain.callNextMessageReceived(AbstractIoFilterChain.java:299)
+	at org.apache.mina.common.support.AbstractIoFilterChain.access$1100(AbstractIoFilterChain.java:53)
+	at org.apache.mina.common.support.AbstractIoFilterChain$EntryImpl$1.messageReceived(AbstractIoFilterChain.java:648)
+	at org.apache.mina.filter.executor.ExecutorFilter.processEvent(ExecutorFilter.java:239)
+	at org.apache.mina.filter.executor.ExecutorFilter$ProcessEventsRunnable.run(ExecutorFilter.java:283)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:51)
+	at java.lang.Thread.run(Thread.java:744)
+2014.10.09 15:03:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 15:05:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 15:07:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 15:09:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 15:10:11 org.jivesoftware.openfire.roster.DefaultRosterItemProvider - INSERT Óï¾äÓë FOREIGN KEY Ô¼Êø"ofRosterGroups_rosterID_fk"³åÍ»¡£¸Ã³åÍ»·¢ÉúÓÚÊı¾İ¿â"DebugOpenfire"£¬±í"dbo.ofRoster", column 'rosterID'¡£
+java.sql.SQLException: INSERT Óï¾äÓë FOREIGN KEY Ô¼Êø"ofRosterGroups_rosterID_fk"³åÍ»¡£¸Ã³åÍ»·¢ÉúÓÚÊı¾İ¿â"DebugOpenfire"£¬±í"dbo.ofRoster", column 'rosterID'¡£
+	at net.sourceforge.jtds.jdbc.SQLDiagnostic.addDiagnostic(SQLDiagnostic.java:368)
+	at net.sourceforge.jtds.jdbc.TdsCore.tdsErrorToken(TdsCore.java:2816)
+	at net.sourceforge.jtds.jdbc.TdsCore.nextToken(TdsCore.java:2254)
+	at net.sourceforge.jtds.jdbc.TdsCore.getMoreResults(TdsCore.java:631)
+	at net.sourceforge.jtds.jdbc.JtdsStatement.processResults(JtdsStatement.java:584)
+	at net.sourceforge.jtds.jdbc.JtdsStatement.executeSQL(JtdsStatement.java:546)
+	at net.sourceforge.jtds.jdbc.JtdsPreparedStatement.executeUpdate(JtdsPreparedStatement.java:505)
+	at sun.reflect.GeneratedMethodAccessor14.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.logicalcobwebs.proxool.ProxyStatement.invoke(ProxyStatement.java:100)
+	at org.logicalcobwebs.proxool.ProxyStatement.intercept(ProxyStatement.java:57)
+	at $java.sql.Statement$$EnhancerByProxool$$ad12e8d.executeUpdate(<generated>)
+	at org.jivesoftware.openfire.roster.DefaultRosterItemProvider.insertGroups(DefaultRosterItemProvider.java:308)
+	at org.jivesoftware.openfire.roster.DefaultRosterItemProvider.updateItem(DefaultRosterItemProvider.java:141)
+	at org.jivesoftware.openfire.roster.Roster.updateRosterItem(Roster.java:420)
+	at org.jivesoftware.openfire.handler.IQRosterHandler.manageRoster(IQRosterHandler.java:238)
+	at org.jivesoftware.openfire.handler.IQRosterHandler.handleIQ(IQRosterHandler.java:121)
+	at org.jivesoftware.openfire.handler.IQHandler.process(IQHandler.java:65)
+	at org.jivesoftware.openfire.IQRouter.handle(IQRouter.java:375)
+	at org.jivesoftware.openfire.IQRouter.route(IQRouter.java:122)
+	at org.jivesoftware.openfire.spi.PacketRouterImpl.route(PacketRouterImpl.java:76)
+	at org.jivesoftware.openfire.net.StanzaHandler.processIQ(StanzaHandler.java:330)
+	at org.jivesoftware.openfire.net.ClientStanzaHandler.processIQ(ClientStanzaHandler.java:93)
+	at org.jivesoftware.openfire.net.StanzaHandler.process(StanzaHandler.java:295)
+	at org.jivesoftware.openfire.net.StanzaHandler.process(StanzaHandler.java:187)
+	at org.jivesoftware.openfire.nio.ConnectionHandler.messageReceived(ConnectionHandler.java:181)
+	at org.apache.mina.common.support.AbstractIoFilterChain$TailFilter.messageReceived(AbstractIoFilterChain.java:570)
+	at org.apache.mina.common.support.AbstractIoFilterChain.callNextMessageReceived(AbstractIoFilterChain.java:299)
+	at org.apache.mina.common.support.AbstractIoFilterChain.access$1100(AbstractIoFilterChain.java:53)
+	at org.apache.mina.common.support.AbstractIoFilterChain$EntryImpl$1.messageReceived(AbstractIoFilterChain.java:648)
+	at org.apache.mina.common.IoFilterAdapter.messageReceived(IoFilterAdapter.java:80)
+	at org.apache.mina.common.support.AbstractIoFilterChain.callNextMessageReceived(AbstractIoFilterChain.java:299)
+	at org.apache.mina.common.support.AbstractIoFilterChain.access$1100(AbstractIoFilterChain.java:53)
+	at org.apache.mina.common.support.AbstractIoFilterChain$EntryImpl$1.messageReceived(AbstractIoFilterChain.java:648)
+	at org.apache.mina.filter.codec.support.SimpleProtocolDecoderOutput.flush(SimpleProtocolDecoderOutput.java:58)
+	at org.apache.mina.filter.codec.ProtocolCodecFilter.messageReceived(ProtocolCodecFilter.java:185)
+	at org.apache.mina.common.support.AbstractIoFilterChain.callNextMessageReceived(AbstractIoFilterChain.java:299)
+	at org.apache.mina.common.support.AbstractIoFilterChain.access$1100(AbstractIoFilterChain.java:53)
+	at org.apache.mina.common.support.AbstractIoFilterChain$EntryImpl$1.messageReceived(AbstractIoFilterChain.java:648)
+	at org.apache.mina.common.IoFilterAdapter.messageReceived(IoFilterAdapter.java:80)
+	at org.jivesoftware.openfire.plugin.RawPrintFilter.messageReceived(RawPrintFilter.java:66)
+	at org.apache.mina.common.support.AbstractIoFilterChain.callNextMessageReceived(AbstractIoFilterChain.java:299)
+	at org.apache.mina.common.support.AbstractIoFilterChain.access$1100(AbstractIoFilterChain.java:53)
+	at org.apache.mina.common.support.AbstractIoFilterChain$EntryImpl$1.messageReceived(AbstractIoFilterChain.java:648)
+	at org.apache.mina.filter.executor.ExecutorFilter.processEvent(ExecutorFilter.java:239)
+	at org.apache.mina.filter.executor.ExecutorFilter$ProcessEventsRunnable.run(ExecutorFilter.java:283)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:51)
+	at java.lang.Thread.run(Thread.java:744)
+2014.10.09 15:10:11 org.jivesoftware.openfire.roster.DefaultRosterItemProvider - INSERT Óï¾äÓë FOREIGN KEY Ô¼Êø"ofRosterGroups_rosterID_fk"³åÍ»¡£¸Ã³åÍ»·¢ÉúÓÚÊı¾İ¿â"DebugOpenfire"£¬±í"dbo.ofRoster", column 'rosterID'¡£
+java.sql.SQLException: INSERT Óï¾äÓë FOREIGN KEY Ô¼Êø"ofRosterGroups_rosterID_fk"³åÍ»¡£¸Ã³åÍ»·¢ÉúÓÚÊı¾İ¿â"DebugOpenfire"£¬±í"dbo.ofRoster", column 'rosterID'¡£
+	at net.sourceforge.jtds.jdbc.SQLDiagnostic.addDiagnostic(SQLDiagnostic.java:368)
+	at net.sourceforge.jtds.jdbc.TdsCore.tdsErrorToken(TdsCore.java:2816)
+	at net.sourceforge.jtds.jdbc.TdsCore.nextToken(TdsCore.java:2254)
+	at net.sourceforge.jtds.jdbc.TdsCore.getMoreResults(TdsCore.java:631)
+	at net.sourceforge.jtds.jdbc.JtdsStatement.processResults(JtdsStatement.java:584)
+	at net.sourceforge.jtds.jdbc.JtdsStatement.executeSQL(JtdsStatement.java:546)
+	at net.sourceforge.jtds.jdbc.JtdsPreparedStatement.executeUpdate(JtdsPreparedStatement.java:505)
+	at sun.reflect.GeneratedMethodAccessor14.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.logicalcobwebs.proxool.ProxyStatement.invoke(ProxyStatement.java:100)
+	at org.logicalcobwebs.proxool.ProxyStatement.intercept(ProxyStatement.java:57)
+	at $java.sql.Statement$$EnhancerByProxool$$ad12e8d.executeUpdate(<generated>)
+	at org.jivesoftware.openfire.roster.DefaultRosterItemProvider.insertGroups(DefaultRosterItemProvider.java:308)
+	at org.jivesoftware.openfire.roster.DefaultRosterItemProvider.updateItem(DefaultRosterItemProvider.java:141)
+	at org.jivesoftware.openfire.roster.Roster.updateRosterItem(Roster.java:420)
+	at org.jivesoftware.openfire.handler.IQRosterHandler.manageRoster(IQRosterHandler.java:238)
+	at org.jivesoftware.openfire.handler.IQRosterHandler.handleIQ(IQRosterHandler.java:121)
+	at org.jivesoftware.openfire.handler.IQHandler.process(IQHandler.java:65)
+	at org.jivesoftware.openfire.IQRouter.handle(IQRouter.java:375)
+	at org.jivesoftware.openfire.IQRouter.route(IQRouter.java:122)
+	at org.jivesoftware.openfire.spi.PacketRouterImpl.route(PacketRouterImpl.java:76)
+	at org.jivesoftware.openfire.net.StanzaHandler.processIQ(StanzaHandler.java:330)
+	at org.jivesoftware.openfire.net.ClientStanzaHandler.processIQ(ClientStanzaHandler.java:93)
+	at org.jivesoftware.openfire.net.StanzaHandler.process(StanzaHandler.java:295)
+	at org.jivesoftware.openfire.net.StanzaHandler.process(StanzaHandler.java:187)
+	at org.jivesoftware.openfire.nio.ConnectionHandler.messageReceived(ConnectionHandler.java:181)
+	at org.apache.mina.common.support.AbstractIoFilterChain$TailFilter.messageReceived(AbstractIoFilterChain.java:570)
+	at org.apache.mina.common.support.AbstractIoFilterChain.callNextMessageReceived(AbstractIoFilterChain.java:299)
+	at org.apache.mina.common.support.AbstractIoFilterChain.access$1100(AbstractIoFilterChain.java:53)
+	at org.apache.mina.common.support.AbstractIoFilterChain$EntryImpl$1.messageReceived(AbstractIoFilterChain.java:648)
+	at org.apache.mina.common.IoFilterAdapter.messageReceived(IoFilterAdapter.java:80)
+	at org.apache.mina.common.support.AbstractIoFilterChain.callNextMessageReceived(AbstractIoFilterChain.java:299)
+	at org.apache.mina.common.support.AbstractIoFilterChain.access$1100(AbstractIoFilterChain.java:53)
+	at org.apache.mina.common.support.AbstractIoFilterChain$EntryImpl$1.messageReceived(AbstractIoFilterChain.java:648)
+	at org.apache.mina.filter.codec.support.SimpleProtocolDecoderOutput.flush(SimpleProtocolDecoderOutput.java:58)
+	at org.apache.mina.filter.codec.ProtocolCodecFilter.messageReceived(ProtocolCodecFilter.java:185)
+	at org.apache.mina.common.support.AbstractIoFilterChain.callNextMessageReceived(AbstractIoFilterChain.java:299)
+	at org.apache.mina.common.support.AbstractIoFilterChain.access$1100(AbstractIoFilterChain.java:53)
+	at org.apache.mina.common.support.AbstractIoFilterChain$EntryImpl$1.messageReceived(AbstractIoFilterChain.java:648)
+	at org.apache.mina.common.IoFilterAdapter.messageReceived(IoFilterAdapter.java:80)
+	at org.jivesoftware.openfire.plugin.RawPrintFilter.messageReceived(RawPrintFilter.java:66)
+	at org.apache.mina.common.support.AbstractIoFilterChain.callNextMessageReceived(AbstractIoFilterChain.java:299)
+	at org.apache.mina.common.support.AbstractIoFilterChain.access$1100(AbstractIoFilterChain.java:53)
+	at org.apache.mina.common.support.AbstractIoFilterChain$EntryImpl$1.messageReceived(AbstractIoFilterChain.java:648)
+	at org.apache.mina.filter.executor.ExecutorFilter.processEvent(ExecutorFilter.java:239)
+	at org.apache.mina.filter.executor.ExecutorFilter$ProcessEventsRunnable.run(ExecutorFilter.java:283)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:51)
+	at java.lang.Thread.run(Thread.java:744)
+2014.10.09 15:10:11 org.jivesoftware.openfire.roster.DefaultRosterItemProvider - INSERT Óï¾äÓë FOREIGN KEY Ô¼Êø"ofRosterGroups_rosterID_fk"³åÍ»¡£¸Ã³åÍ»·¢ÉúÓÚÊı¾İ¿â"DebugOpenfire"£¬±í"dbo.ofRoster", column 'rosterID'¡£
+java.sql.SQLException: INSERT Óï¾äÓë FOREIGN KEY Ô¼Êø"ofRosterGroups_rosterID_fk"³åÍ»¡£¸Ã³åÍ»·¢ÉúÓÚÊı¾İ¿â"DebugOpenfire"£¬±í"dbo.ofRoster", column 'rosterID'¡£
+	at net.sourceforge.jtds.jdbc.SQLDiagnostic.addDiagnostic(SQLDiagnostic.java:368)
+	at net.sourceforge.jtds.jdbc.TdsCore.tdsErrorToken(TdsCore.java:2816)
+	at net.sourceforge.jtds.jdbc.TdsCore.nextToken(TdsCore.java:2254)
+	at net.sourceforge.jtds.jdbc.TdsCore.getMoreResults(TdsCore.java:631)
+	at net.sourceforge.jtds.jdbc.JtdsStatement.processResults(JtdsStatement.java:584)
+	at net.sourceforge.jtds.jdbc.JtdsStatement.executeSQL(JtdsStatement.java:546)
+	at net.sourceforge.jtds.jdbc.JtdsPreparedStatement.executeUpdate(JtdsPreparedStatement.java:505)
+	at sun.reflect.GeneratedMethodAccessor14.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.logicalcobwebs.proxool.ProxyStatement.invoke(ProxyStatement.java:100)
+	at org.logicalcobwebs.proxool.ProxyStatement.intercept(ProxyStatement.java:57)
+	at $java.sql.Statement$$EnhancerByProxool$$ad12e8d.executeUpdate(<generated>)
+	at org.jivesoftware.openfire.roster.DefaultRosterItemProvider.insertGroups(DefaultRosterItemProvider.java:308)
+	at org.jivesoftware.openfire.roster.DefaultRosterItemProvider.updateItem(DefaultRosterItemProvider.java:141)
+	at org.jivesoftware.openfire.roster.Roster.updateRosterItem(Roster.java:420)
+	at org.jivesoftware.openfire.handler.IQRosterHandler.manageRoster(IQRosterHandler.java:238)
+	at org.jivesoftware.openfire.handler.IQRosterHandler.handleIQ(IQRosterHandler.java:121)
+	at org.jivesoftware.openfire.handler.IQHandler.process(IQHandler.java:65)
+	at org.jivesoftware.openfire.IQRouter.handle(IQRouter.java:375)
+	at org.jivesoftware.openfire.IQRouter.route(IQRouter.java:122)
+	at org.jivesoftware.openfire.spi.PacketRouterImpl.route(PacketRouterImpl.java:76)
+	at org.jivesoftware.openfire.net.StanzaHandler.processIQ(StanzaHandler.java:330)
+	at org.jivesoftware.openfire.net.ClientStanzaHandler.processIQ(ClientStanzaHandler.java:93)
+	at org.jivesoftware.openfire.net.StanzaHandler.process(StanzaHandler.java:295)
+	at org.jivesoftware.openfire.net.StanzaHandler.process(StanzaHandler.java:187)
+	at org.jivesoftware.openfire.nio.ConnectionHandler.messageReceived(ConnectionHandler.java:181)
+	at org.apache.mina.common.support.AbstractIoFilterChain$TailFilter.messageReceived(AbstractIoFilterChain.java:570)
+	at org.apache.mina.common.support.AbstractIoFilterChain.callNextMessageReceived(AbstractIoFilterChain.java:299)
+	at org.apache.mina.common.support.AbstractIoFilterChain.access$1100(AbstractIoFilterChain.java:53)
+	at org.apache.mina.common.support.AbstractIoFilterChain$EntryImpl$1.messageReceived(AbstractIoFilterChain.java:648)
+	at org.apache.mina.common.IoFilterAdapter.messageReceived(IoFilterAdapter.java:80)
+	at org.apache.mina.common.support.AbstractIoFilterChain.callNextMessageReceived(AbstractIoFilterChain.java:299)
+	at org.apache.mina.common.support.AbstractIoFilterChain.access$1100(AbstractIoFilterChain.java:53)
+	at org.apache.mina.common.support.AbstractIoFilterChain$EntryImpl$1.messageReceived(AbstractIoFilterChain.java:648)
+	at org.apache.mina.filter.codec.support.SimpleProtocolDecoderOutput.flush(SimpleProtocolDecoderOutput.java:58)
+	at org.apache.mina.filter.codec.ProtocolCodecFilter.messageReceived(ProtocolCodecFilter.java:185)
+	at org.apache.mina.common.support.AbstractIoFilterChain.callNextMessageReceived(AbstractIoFilterChain.java:299)
+	at org.apache.mina.common.support.AbstractIoFilterChain.access$1100(AbstractIoFilterChain.java:53)
+	at org.apache.mina.common.support.AbstractIoFilterChain$EntryImpl$1.messageReceived(AbstractIoFilterChain.java:648)
+	at org.apache.mina.common.IoFilterAdapter.messageReceived(IoFilterAdapter.java:80)
+	at org.jivesoftware.openfire.plugin.RawPrintFilter.messageReceived(RawPrintFilter.java:66)
+	at org.apache.mina.common.support.AbstractIoFilterChain.callNextMessageReceived(AbstractIoFilterChain.java:299)
+	at org.apache.mina.common.support.AbstractIoFilterChain.access$1100(AbstractIoFilterChain.java:53)
+	at org.apache.mina.common.support.AbstractIoFilterChain$EntryImpl$1.messageReceived(AbstractIoFilterChain.java:648)
+	at org.apache.mina.filter.executor.ExecutorFilter.processEvent(ExecutorFilter.java:239)
+	at org.apache.mina.filter.executor.ExecutorFilter$ProcessEventsRunnable.run(ExecutorFilter.java:283)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:51)
+	at java.lang.Thread.run(Thread.java:744)
+2014.10.09 15:11:00 org.jivesoftware.openfire.roster.DefaultRosterItemProvider - INSERT Óï¾äÓë FOREIGN KEY Ô¼Êø"ofRosterGroups_rosterID_fk"³åÍ»¡£¸Ã³åÍ»·¢ÉúÓÚÊı¾İ¿â"DebugOpenfire"£¬±í"dbo.ofRoster", column 'rosterID'¡£
+java.sql.SQLException: INSERT Óï¾äÓë FOREIGN KEY Ô¼Êø"ofRosterGroups_rosterID_fk"³åÍ»¡£¸Ã³åÍ»·¢ÉúÓÚÊı¾İ¿â"DebugOpenfire"£¬±í"dbo.ofRoster", column 'rosterID'¡£
+	at net.sourceforge.jtds.jdbc.SQLDiagnostic.addDiagnostic(SQLDiagnostic.java:368)
+	at net.sourceforge.jtds.jdbc.TdsCore.tdsErrorToken(TdsCore.java:2816)
+	at net.sourceforge.jtds.jdbc.TdsCore.nextToken(TdsCore.java:2254)
+	at net.sourceforge.jtds.jdbc.TdsCore.getMoreResults(TdsCore.java:631)
+	at net.sourceforge.jtds.jdbc.JtdsStatement.processResults(JtdsStatement.java:584)
+	at net.sourceforge.jtds.jdbc.JtdsStatement.executeSQL(JtdsStatement.java:546)
+	at net.sourceforge.jtds.jdbc.JtdsPreparedStatement.executeUpdate(JtdsPreparedStatement.java:505)
+	at sun.reflect.GeneratedMethodAccessor14.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.logicalcobwebs.proxool.ProxyStatement.invoke(ProxyStatement.java:100)
+	at org.logicalcobwebs.proxool.ProxyStatement.intercept(ProxyStatement.java:57)
+	at $java.sql.Statement$$EnhancerByProxool$$ad12e8d.executeUpdate(<generated>)
+	at org.jivesoftware.openfire.roster.DefaultRosterItemProvider.insertGroups(DefaultRosterItemProvider.java:308)
+	at org.jivesoftware.openfire.roster.DefaultRosterItemProvider.updateItem(DefaultRosterItemProvider.java:141)
+	at org.jivesoftware.openfire.roster.Roster.updateRosterItem(Roster.java:420)
+	at org.jivesoftware.openfire.handler.PresenceSubscribeHandler.manageSub(PresenceSubscribeHandler.java:302)
+	at org.jivesoftware.openfire.handler.PresenceSubscribeHandler.process(PresenceSubscribeHandler.java:157)
+	at org.jivesoftware.openfire.PresenceRouter.handle(PresenceRouter.java:180)
+	at org.jivesoftware.openfire.PresenceRouter.route(PresenceRouter.java:84)
+	at org.jivesoftware.openfire.spi.PacketRouterImpl.route(PacketRouterImpl.java:84)
+	at org.jivesoftware.openfire.roster.Roster.deleteRosterItem(Roster.java:459)
+	at org.jivesoftware.openfire.handler.IQRosterHandler.removeItem(IQRosterHandler.java:269)
+	at org.jivesoftware.openfire.handler.IQRosterHandler.manageRoster(IQRosterHandler.java:231)
+	at org.jivesoftware.openfire.handler.IQRosterHandler.handleIQ(IQRosterHandler.java:121)
+	at org.jivesoftware.openfire.handler.IQHandler.process(IQHandler.java:65)
+	at org.jivesoftware.openfire.IQRouter.handle(IQRouter.java:375)
+	at org.jivesoftware.openfire.IQRouter.route(IQRouter.java:122)
+	at org.jivesoftware.openfire.spi.PacketRouterImpl.route(PacketRouterImpl.java:76)
+	at org.jivesoftware.openfire.net.StanzaHandler.processIQ(StanzaHandler.java:330)
+	at org.jivesoftware.openfire.net.ClientStanzaHandler.processIQ(ClientStanzaHandler.java:93)
+	at org.jivesoftware.openfire.net.StanzaHandler.process(StanzaHandler.java:295)
+	at org.jivesoftware.openfire.net.StanzaHandler.process(StanzaHandler.java:187)
+	at org.jivesoftware.openfire.nio.ConnectionHandler.messageReceived(ConnectionHandler.java:181)
+	at org.apache.mina.common.support.AbstractIoFilterChain$TailFilter.messageReceived(AbstractIoFilterChain.java:570)
+	at org.apache.mina.common.support.AbstractIoFilterChain.callNextMessageReceived(AbstractIoFilterChain.java:299)
+	at org.apache.mina.common.support.AbstractIoFilterChain.access$1100(AbstractIoFilterChain.java:53)
+	at org.apache.mina.common.support.AbstractIoFilterChain$EntryImpl$1.messageReceived(AbstractIoFilterChain.java:648)
+	at org.apache.mina.common.IoFilterAdapter.messageReceived(IoFilterAdapter.java:80)
+	at org.apache.mina.common.support.AbstractIoFilterChain.callNextMessageReceived(AbstractIoFilterChain.java:299)
+	at org.apache.mina.common.support.AbstractIoFilterChain.access$1100(AbstractIoFilterChain.java:53)
+	at org.apache.mina.common.support.AbstractIoFilterChain$EntryImpl$1.messageReceived(AbstractIoFilterChain.java:648)
+	at org.apache.mina.filter.codec.support.SimpleProtocolDecoderOutput.flush(SimpleProtocolDecoderOutput.java:58)
+	at org.apache.mina.filter.codec.ProtocolCodecFilter.messageReceived(ProtocolCodecFilter.java:185)
+	at org.apache.mina.common.support.AbstractIoFilterChain.callNextMessageReceived(AbstractIoFilterChain.java:299)
+	at org.apache.mina.common.support.AbstractIoFilterChain.access$1100(AbstractIoFilterChain.java:53)
+	at org.apache.mina.common.support.AbstractIoFilterChain$EntryImpl$1.messageReceived(AbstractIoFilterChain.java:648)
+	at org.apache.mina.common.IoFilterAdapter.messageReceived(IoFilterAdapter.java:80)
+	at org.jivesoftware.openfire.plugin.RawPrintFilter.messageReceived(RawPrintFilter.java:66)
+	at org.apache.mina.common.support.AbstractIoFilterChain.callNextMessageReceived(AbstractIoFilterChain.java:299)
+	at org.apache.mina.common.support.AbstractIoFilterChain.access$1100(AbstractIoFilterChain.java:53)
+	at org.apache.mina.common.support.AbstractIoFilterChain$EntryImpl$1.messageReceived(AbstractIoFilterChain.java:648)
+	at org.apache.mina.filter.executor.ExecutorFilter.processEvent(ExecutorFilter.java:239)
+	at org.apache.mina.filter.executor.ExecutorFilter$ProcessEventsRunnable.run(ExecutorFilter.java:283)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:51)
+	at java.lang.Thread.run(Thread.java:744)
+2014.10.09 15:11:00 org.jivesoftware.openfire.roster.DefaultRosterItemProvider - INSERT Óï¾äÓë FOREIGN KEY Ô¼Êø"ofRosterGroups_rosterID_fk"³åÍ»¡£¸Ã³åÍ»·¢ÉúÓÚÊı¾İ¿â"DebugOpenfire"£¬±í"dbo.ofRoster", column 'rosterID'¡£
+java.sql.SQLException: INSERT Óï¾äÓë FOREIGN KEY Ô¼Êø"ofRosterGroups_rosterID_fk"³åÍ»¡£¸Ã³åÍ»·¢ÉúÓÚÊı¾İ¿â"DebugOpenfire"£¬±í"dbo.ofRoster", column 'rosterID'¡£
+	at net.sourceforge.jtds.jdbc.SQLDiagnostic.addDiagnostic(SQLDiagnostic.java:368)
+	at net.sourceforge.jtds.jdbc.TdsCore.tdsErrorToken(TdsCore.java:2816)
+	at net.sourceforge.jtds.jdbc.TdsCore.nextToken(TdsCore.java:2254)
+	at net.sourceforge.jtds.jdbc.TdsCore.getMoreResults(TdsCore.java:631)
+	at net.sourceforge.jtds.jdbc.JtdsStatement.processResults(JtdsStatement.java:584)
+	at net.sourceforge.jtds.jdbc.JtdsStatement.executeSQL(JtdsStatement.java:546)
+	at net.sourceforge.jtds.jdbc.JtdsPreparedStatement.executeUpdate(JtdsPreparedStatement.java:505)
+	at sun.reflect.GeneratedMethodAccessor14.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.logicalcobwebs.proxool.ProxyStatement.invoke(ProxyStatement.java:100)
+	at org.logicalcobwebs.proxool.ProxyStatement.intercept(ProxyStatement.java:57)
+	at $java.sql.Statement$$EnhancerByProxool$$ad12e8d.executeUpdate(<generated>)
+	at org.jivesoftware.openfire.roster.DefaultRosterItemProvider.insertGroups(DefaultRosterItemProvider.java:308)
+	at org.jivesoftware.openfire.roster.DefaultRosterItemProvider.updateItem(DefaultRosterItemProvider.java:141)
+	at org.jivesoftware.openfire.roster.Roster.updateRosterItem(Roster.java:420)
+	at org.jivesoftware.openfire.handler.PresenceSubscribeHandler.manageSub(PresenceSubscribeHandler.java:302)
+	at org.jivesoftware.openfire.handler.PresenceSubscribeHandler.process(PresenceSubscribeHandler.java:157)
+	at org.jivesoftware.openfire.PresenceRouter.handle(PresenceRouter.java:180)
+	at org.jivesoftware.openfire.PresenceRouter.route(PresenceRouter.java:84)
+	at org.jivesoftware.openfire.spi.PacketRouterImpl.route(PacketRouterImpl.java:84)
+	at org.jivesoftware.openfire.roster.Roster.deleteRosterItem(Roster.java:459)
+	at org.jivesoftware.openfire.handler.IQRosterHandler.removeItem(IQRosterHandler.java:269)
+	at org.jivesoftware.openfire.handler.IQRosterHandler.manageRoster(IQRosterHandler.java:231)
+	at org.jivesoftware.openfire.handler.IQRosterHandler.handleIQ(IQRosterHandler.java:121)
+	at org.jivesoftware.openfire.handler.IQHandler.process(IQHandler.java:65)
+	at org.jivesoftware.openfire.IQRouter.handle(IQRouter.java:375)
+	at org.jivesoftware.openfire.IQRouter.route(IQRouter.java:122)
+	at org.jivesoftware.openfire.spi.PacketRouterImpl.route(PacketRouterImpl.java:76)
+	at org.jivesoftware.openfire.net.StanzaHandler.processIQ(StanzaHandler.java:330)
+	at org.jivesoftware.openfire.net.ClientStanzaHandler.processIQ(ClientStanzaHandler.java:93)
+	at org.jivesoftware.openfire.net.StanzaHandler.process(StanzaHandler.java:295)
+	at org.jivesoftware.openfire.net.StanzaHandler.process(StanzaHandler.java:187)
+	at org.jivesoftware.openfire.nio.ConnectionHandler.messageReceived(ConnectionHandler.java:181)
+	at org.apache.mina.common.support.AbstractIoFilterChain$TailFilter.messageReceived(AbstractIoFilterChain.java:570)
+	at org.apache.mina.common.support.AbstractIoFilterChain.callNextMessageReceived(AbstractIoFilterChain.java:299)
+	at org.apache.mina.common.support.AbstractIoFilterChain.access$1100(AbstractIoFilterChain.java:53)
+	at org.apache.mina.common.support.AbstractIoFilterChain$EntryImpl$1.messageReceived(AbstractIoFilterChain.java:648)
+	at org.apache.mina.common.IoFilterAdapter.messageReceived(IoFilterAdapter.java:80)
+	at org.apache.mina.common.support.AbstractIoFilterChain.callNextMessageReceived(AbstractIoFilterChain.java:299)
+	at org.apache.mina.common.support.AbstractIoFilterChain.access$1100(AbstractIoFilterChain.java:53)
+	at org.apache.mina.common.support.AbstractIoFilterChain$EntryImpl$1.messageReceived(AbstractIoFilterChain.java:648)
+	at org.apache.mina.filter.codec.support.SimpleProtocolDecoderOutput.flush(SimpleProtocolDecoderOutput.java:58)
+	at org.apache.mina.filter.codec.ProtocolCodecFilter.messageReceived(ProtocolCodecFilter.java:185)
+	at org.apache.mina.common.support.AbstractIoFilterChain.callNextMessageReceived(AbstractIoFilterChain.java:299)
+	at org.apache.mina.common.support.AbstractIoFilterChain.access$1100(AbstractIoFilterChain.java:53)
+	at org.apache.mina.common.support.AbstractIoFilterChain$EntryImpl$1.messageReceived(AbstractIoFilterChain.java:648)
+	at org.apache.mina.common.IoFilterAdapter.messageReceived(IoFilterAdapter.java:80)
+	at org.jivesoftware.openfire.plugin.RawPrintFilter.messageReceived(RawPrintFilter.java:66)
+	at org.apache.mina.common.support.AbstractIoFilterChain.callNextMessageReceived(AbstractIoFilterChain.java:299)
+	at org.apache.mina.common.support.AbstractIoFilterChain.access$1100(AbstractIoFilterChain.java:53)
+	at org.apache.mina.common.support.AbstractIoFilterChain$EntryImpl$1.messageReceived(AbstractIoFilterChain.java:648)
+	at org.apache.mina.filter.executor.ExecutorFilter.processEvent(ExecutorFilter.java:239)
+	at org.apache.mina.filter.executor.ExecutorFilter$ProcessEventsRunnable.run(ExecutorFilter.java:283)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:51)
+	at java.lang.Thread.run(Thread.java:744)
+2014.10.09 15:11:00 org.jivesoftware.openfire.roster.DefaultRosterItemProvider - INSERT Óï¾äÓë FOREIGN KEY Ô¼Êø"ofRosterGroups_rosterID_fk"³åÍ»¡£¸Ã³åÍ»·¢ÉúÓÚÊı¾İ¿â"DebugOpenfire"£¬±í"dbo.ofRoster", column 'rosterID'¡£
+java.sql.SQLException: INSERT Óï¾äÓë FOREIGN KEY Ô¼Êø"ofRosterGroups_rosterID_fk"³åÍ»¡£¸Ã³åÍ»·¢ÉúÓÚÊı¾İ¿â"DebugOpenfire"£¬±í"dbo.ofRoster", column 'rosterID'¡£
+	at net.sourceforge.jtds.jdbc.SQLDiagnostic.addDiagnostic(SQLDiagnostic.java:368)
+	at net.sourceforge.jtds.jdbc.TdsCore.tdsErrorToken(TdsCore.java:2816)
+	at net.sourceforge.jtds.jdbc.TdsCore.nextToken(TdsCore.java:2254)
+	at net.sourceforge.jtds.jdbc.TdsCore.getMoreResults(TdsCore.java:631)
+	at net.sourceforge.jtds.jdbc.JtdsStatement.processResults(JtdsStatement.java:584)
+	at net.sourceforge.jtds.jdbc.JtdsStatement.executeSQL(JtdsStatement.java:546)
+	at net.sourceforge.jtds.jdbc.JtdsPreparedStatement.executeUpdate(JtdsPreparedStatement.java:505)
+	at sun.reflect.GeneratedMethodAccessor14.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.logicalcobwebs.proxool.ProxyStatement.invoke(ProxyStatement.java:100)
+	at org.logicalcobwebs.proxool.ProxyStatement.intercept(ProxyStatement.java:57)
+	at $java.sql.Statement$$EnhancerByProxool$$ad12e8d.executeUpdate(<generated>)
+	at org.jivesoftware.openfire.roster.DefaultRosterItemProvider.insertGroups(DefaultRosterItemProvider.java:308)
+	at org.jivesoftware.openfire.roster.DefaultRosterItemProvider.updateItem(DefaultRosterItemProvider.java:141)
+	at org.jivesoftware.openfire.roster.Roster.updateRosterItem(Roster.java:420)
+	at org.jivesoftware.openfire.handler.PresenceSubscribeHandler.manageSub(PresenceSubscribeHandler.java:302)
+	at org.jivesoftware.openfire.handler.PresenceSubscribeHandler.process(PresenceSubscribeHandler.java:157)
+	at org.jivesoftware.openfire.PresenceRouter.handle(PresenceRouter.java:180)
+	at org.jivesoftware.openfire.PresenceRouter.route(PresenceRouter.java:84)
+	at org.jivesoftware.openfire.spi.PacketRouterImpl.route(PacketRouterImpl.java:84)
+	at org.jivesoftware.openfire.roster.Roster.deleteRosterItem(Roster.java:459)
+	at org.jivesoftware.openfire.handler.IQRosterHandler.removeItem(IQRosterHandler.java:269)
+	at org.jivesoftware.openfire.handler.IQRosterHandler.manageRoster(IQRosterHandler.java:231)
+	at org.jivesoftware.openfire.handler.IQRosterHandler.handleIQ(IQRosterHandler.java:121)
+	at org.jivesoftware.openfire.handler.IQHandler.process(IQHandler.java:65)
+	at org.jivesoftware.openfire.IQRouter.handle(IQRouter.java:375)
+	at org.jivesoftware.openfire.IQRouter.route(IQRouter.java:122)
+	at org.jivesoftware.openfire.spi.PacketRouterImpl.route(PacketRouterImpl.java:76)
+	at org.jivesoftware.openfire.net.StanzaHandler.processIQ(StanzaHandler.java:330)
+	at org.jivesoftware.openfire.net.ClientStanzaHandler.processIQ(ClientStanzaHandler.java:93)
+	at org.jivesoftware.openfire.net.StanzaHandler.process(StanzaHandler.java:295)
+	at org.jivesoftware.openfire.net.StanzaHandler.process(StanzaHandler.java:187)
+	at org.jivesoftware.openfire.nio.ConnectionHandler.messageReceived(ConnectionHandler.java:181)
+	at org.apache.mina.common.support.AbstractIoFilterChain$TailFilter.messageReceived(AbstractIoFilterChain.java:570)
+	at org.apache.mina.common.support.AbstractIoFilterChain.callNextMessageReceived(AbstractIoFilterChain.java:299)
+	at org.apache.mina.common.support.AbstractIoFilterChain.access$1100(AbstractIoFilterChain.java:53)
+	at org.apache.mina.common.support.AbstractIoFilterChain$EntryImpl$1.messageReceived(AbstractIoFilterChain.java:648)
+	at org.apache.mina.common.IoFilterAdapter.messageReceived(IoFilterAdapter.java:80)
+	at org.apache.mina.common.support.AbstractIoFilterChain.callNextMessageReceived(AbstractIoFilterChain.java:299)
+	at org.apache.mina.common.support.AbstractIoFilterChain.access$1100(AbstractIoFilterChain.java:53)
+	at org.apache.mina.common.support.AbstractIoFilterChain$EntryImpl$1.messageReceived(AbstractIoFilterChain.java:648)
+	at org.apache.mina.filter.codec.support.SimpleProtocolDecoderOutput.flush(SimpleProtocolDecoderOutput.java:58)
+	at org.apache.mina.filter.codec.ProtocolCodecFilter.messageReceived(ProtocolCodecFilter.java:185)
+	at org.apache.mina.common.support.AbstractIoFilterChain.callNextMessageReceived(AbstractIoFilterChain.java:299)
+	at org.apache.mina.common.support.AbstractIoFilterChain.access$1100(AbstractIoFilterChain.java:53)
+	at org.apache.mina.common.support.AbstractIoFilterChain$EntryImpl$1.messageReceived(AbstractIoFilterChain.java:648)
+	at org.apache.mina.common.IoFilterAdapter.messageReceived(IoFilterAdapter.java:80)
+	at org.jivesoftware.openfire.plugin.RawPrintFilter.messageReceived(RawPrintFilter.java:66)
+	at org.apache.mina.common.support.AbstractIoFilterChain.callNextMessageReceived(AbstractIoFilterChain.java:299)
+	at org.apache.mina.common.support.AbstractIoFilterChain.access$1100(AbstractIoFilterChain.java:53)
+	at org.apache.mina.common.support.AbstractIoFilterChain$EntryImpl$1.messageReceived(AbstractIoFilterChain.java:648)
+	at org.apache.mina.filter.executor.ExecutorFilter.processEvent(ExecutorFilter.java:239)
+	at org.apache.mina.filter.executor.ExecutorFilter$ProcessEventsRunnable.run(ExecutorFilter.java:283)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:51)
+	at java.lang.Thread.run(Thread.java:744)
+2014.10.09 15:11:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 15:13:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 15:15:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 15:17:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 15:18:51 org.jivesoftware.openfire.interceptor.InterceptorManager - Error in interceptor: org.jivesoftware.openfire.plugin.PacketFilterPlugin@3dc81f47 while intercepting: 
+<iq type="error" id="PIq9z-69" to="test1@10.5.99.72/SHIM 2.7" from="@10.5.99.72">
+  <vCard xmlns="vcard-temp">
+    <JABBERID>@10.5.99.72</JABBERID> 
+  </vCard>
+  <error code="400" type="modify">
+    <jid-malformed xmlns="urn:ietf:params:xml:ns:xmpp-stanzas"/>
+  </error>
+</iq>
+java.lang.IllegalArgumentException: Existing at-character at the first character of the string indicates that an empty node part is provided. This is illegal. Offending value: '@10.5.99.72'
+	at org.xmpp.packet.JID.getParts(JID.java:567)
+	at org.xmpp.packet.Packet.getFrom(Packet.java:224)
+	at org.jivesoftware.openfire.plugin.PacketFilter.findMatch(PacketFilter.java:32)
+	at org.jivesoftware.openfire.plugin.PacketFilterPlugin.interceptPacket(PacketFilterPlugin.java:77)
+	at org.jivesoftware.openfire.interceptor.InterceptorManager.invokeInterceptors(InterceptorManager.java:239)
+	at org.jivesoftware.openfire.session.LocalSession.process(LocalSession.java:281)
+	at org.jivesoftware.openfire.net.StanzaHandler.process(StanzaHandler.java:285)
+	at org.jivesoftware.openfire.net.StanzaHandler.process(StanzaHandler.java:187)
+	at org.jivesoftware.openfire.nio.ConnectionHandler.messageReceived(ConnectionHandler.java:181)
+	at org.apache.mina.common.support.AbstractIoFilterChain$TailFilter.messageReceived(AbstractIoFilterChain.java:570)
+	at org.apache.mina.common.support.AbstractIoFilterChain.callNextMessageReceived(AbstractIoFilterChain.java:299)
+	at org.apache.mina.common.support.AbstractIoFilterChain.access$1100(AbstractIoFilterChain.java:53)
+	at org.apache.mina.common.support.AbstractIoFilterChain$EntryImpl$1.messageReceived(AbstractIoFilterChain.java:648)
+	at org.apache.mina.common.IoFilterAdapter.messageReceived(IoFilterAdapter.java:80)
+	at org.apache.mina.common.support.AbstractIoFilterChain.callNextMessageReceived(AbstractIoFilterChain.java:299)
+	at org.apache.mina.common.support.AbstractIoFilterChain.access$1100(AbstractIoFilterChain.java:53)
+	at org.apache.mina.common.support.AbstractIoFilterChain$EntryImpl$1.messageReceived(AbstractIoFilterChain.java:648)
+	at org.apache.mina.filter.codec.support.SimpleProtocolDecoderOutput.flush(SimpleProtocolDecoderOutput.java:58)
+	at org.apache.mina.filter.codec.ProtocolCodecFilter.messageReceived(ProtocolCodecFilter.java:185)
+	at org.apache.mina.common.support.AbstractIoFilterChain.callNextMessageReceived(AbstractIoFilterChain.java:299)
+	at org.apache.mina.common.support.AbstractIoFilterChain.access$1100(AbstractIoFilterChain.java:53)
+	at org.apache.mina.common.support.AbstractIoFilterChain$EntryImpl$1.messageReceived(AbstractIoFilterChain.java:648)
+	at org.apache.mina.common.IoFilterAdapter.messageReceived(IoFilterAdapter.java:80)
+	at org.jivesoftware.openfire.plugin.RawPrintFilter.messageReceived(RawPrintFilter.java:66)
+	at org.apache.mina.common.support.AbstractIoFilterChain.callNextMessageReceived(AbstractIoFilterChain.java:299)
+	at org.apache.mina.common.support.AbstractIoFilterChain.access$1100(AbstractIoFilterChain.java:53)
+	at org.apache.mina.common.support.AbstractIoFilterChain$EntryImpl$1.messageReceived(AbstractIoFilterChain.java:648)
+	at org.apache.mina.filter.executor.ExecutorFilter.processEvent(ExecutorFilter.java:239)
+	at org.apache.mina.filter.executor.ExecutorFilter$ProcessEventsRunnable.run(ExecutorFilter.java:283)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:51)
+	at java.lang.Thread.run(Thread.java:744)
+2014.10.09 15:19:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 15:21:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 15:23:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 15:25:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 15:27:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 15:29:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 15:31:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 15:33:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 15:35:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 15:37:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 15:39:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 15:41:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 15:43:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 15:45:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 15:47:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 15:49:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 15:51:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 15:53:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 15:55:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 15:57:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 15:59:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 16:01:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 16:03:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 16:05:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 16:07:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 16:09:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 16:11:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 16:13:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 16:15:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 16:17:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 16:19:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 16:21:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 16:23:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 16:25:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 16:27:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 16:29:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 16:31:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 16:33:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 16:33:26 org.jivesoftware.openfire.roster.DefaultRosterItemProvider - ÄÚ²¿·şÎñÆ÷´íÎó
+java.sql.SQLException: DELETE Óï¾äÓë REFERENCE Ô¼Êø"ofRosterGroups_rosterID_fk"³åÍ»¡£¸Ã³åÍ»·¢ÉúÓÚÊı¾İ¿â"DebugOpenfire"£¬±í"dbo.ofRosterGroups", column 'rosterID'¡£
+	at net.sourceforge.jtds.jdbc.SQLDiagnostic.addDiagnostic(SQLDiagnostic.java:368)
+	at net.sourceforge.jtds.jdbc.TdsCore.tdsErrorToken(TdsCore.java:2816)
+	at net.sourceforge.jtds.jdbc.TdsCore.nextToken(TdsCore.java:2254)
+	at net.sourceforge.jtds.jdbc.TdsCore.getMoreResults(TdsCore.java:631)
+	at net.sourceforge.jtds.jdbc.JtdsStatement.processResults(JtdsStatement.java:584)
+	at net.sourceforge.jtds.jdbc.JtdsStatement.executeSQL(JtdsStatement.java:546)
+	at net.sourceforge.jtds.jdbc.JtdsPreparedStatement.executeUpdate(JtdsPreparedStatement.java:505)
+	at sun.reflect.GeneratedMethodAccessor14.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.logicalcobwebs.proxool.ProxyStatement.invoke(ProxyStatement.java:100)
+	at org.logicalcobwebs.proxool.ProxyStatement.intercept(ProxyStatement.java:57)
+	at $java.sql.Statement$$EnhancerByProxool$$ad12e8d.executeUpdate(<generated>)
+	at org.jivesoftware.openfire.roster.DefaultRosterItemProvider.deleteItem(DefaultRosterItemProvider.java:172)
+	at org.jivesoftware.openfire.roster.Roster.deleteRosterItem(Roster.java:479)
+	at org.jivesoftware.openfire.handler.IQRosterHandler.removeItem(IQRosterHandler.java:269)
+	at org.jivesoftware.openfire.handler.IQRosterHandler.manageRoster(IQRosterHandler.java:231)
+	at org.jivesoftware.openfire.handler.IQRosterHandler.handleIQ(IQRosterHandler.java:121)
+	at org.jivesoftware.openfire.handler.IQHandler.process(IQHandler.java:65)
+	at org.jivesoftware.openfire.IQRouter.handle(IQRouter.java:375)
+	at org.jivesoftware.openfire.IQRouter.route(IQRouter.java:122)
+	at org.jivesoftware.openfire.spi.PacketRouterImpl.route(PacketRouterImpl.java:76)
+	at org.jivesoftware.openfire.net.StanzaHandler.processIQ(StanzaHandler.java:330)
+	at org.jivesoftware.openfire.net.ClientStanzaHandler.processIQ(ClientStanzaHandler.java:93)
+	at org.jivesoftware.openfire.net.StanzaHandler.process(StanzaHandler.java:295)
+	at org.jivesoftware.openfire.net.StanzaHandler.process(StanzaHandler.java:187)
+	at org.jivesoftware.openfire.nio.ConnectionHandler.messageReceived(ConnectionHandler.java:181)
+	at org.apache.mina.common.support.AbstractIoFilterChain$TailFilter.messageReceived(AbstractIoFilterChain.java:570)
+	at org.apache.mina.common.support.AbstractIoFilterChain.callNextMessageReceived(AbstractIoFilterChain.java:299)
+	at org.apache.mina.common.support.AbstractIoFilterChain.access$1100(AbstractIoFilterChain.java:53)
+	at org.apache.mina.common.support.AbstractIoFilterChain$EntryImpl$1.messageReceived(AbstractIoFilterChain.java:648)
+	at org.apache.mina.common.IoFilterAdapter.messageReceived(IoFilterAdapter.java:80)
+	at org.apache.mina.common.support.AbstractIoFilterChain.callNextMessageReceived(AbstractIoFilterChain.java:299)
+	at org.apache.mina.common.support.AbstractIoFilterChain.access$1100(AbstractIoFilterChain.java:53)
+	at org.apache.mina.common.support.AbstractIoFilterChain$EntryImpl$1.messageReceived(AbstractIoFilterChain.java:648)
+	at org.apache.mina.filter.codec.support.SimpleProtocolDecoderOutput.flush(SimpleProtocolDecoderOutput.java:58)
+	at org.apache.mina.filter.codec.ProtocolCodecFilter.messageReceived(ProtocolCodecFilter.java:185)
+	at org.apache.mina.common.support.AbstractIoFilterChain.callNextMessageReceived(AbstractIoFilterChain.java:299)
+	at org.apache.mina.common.support.AbstractIoFilterChain.access$1100(AbstractIoFilterChain.java:53)
+	at org.apache.mina.common.support.AbstractIoFilterChain$EntryImpl$1.messageReceived(AbstractIoFilterChain.java:648)
+	at org.apache.mina.common.IoFilterAdapter.messageReceived(IoFilterAdapter.java:80)
+	at org.jivesoftware.openfire.plugin.RawPrintFilter.messageReceived(RawPrintFilter.java:66)
+	at org.apache.mina.common.support.AbstractIoFilterChain.callNextMessageReceived(AbstractIoFilterChain.java:299)
+	at org.apache.mina.common.support.AbstractIoFilterChain.access$1100(AbstractIoFilterChain.java:53)
+	at org.apache.mina.common.support.AbstractIoFilterChain$EntryImpl$1.messageReceived(AbstractIoFilterChain.java:648)
+	at org.apache.mina.filter.executor.ExecutorFilter.processEvent(ExecutorFilter.java:239)
+	at org.apache.mina.filter.executor.ExecutorFilter$ProcessEventsRunnable.run(ExecutorFilter.java:283)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:51)
+	at java.lang.Thread.run(Thread.java:744)
+2014.10.09 16:33:26 org.jivesoftware.openfire.roster.DefaultRosterItemProvider - INSERT Óï¾äÓë FOREIGN KEY Ô¼Êø"ofRosterGroups_rosterID_fk"³åÍ»¡£¸Ã³åÍ»·¢ÉúÓÚÊı¾İ¿â"DebugOpenfire"£¬±í"dbo.ofRoster", column 'rosterID'¡£
+java.sql.SQLException: INSERT Óï¾äÓë FOREIGN KEY Ô¼Êø"ofRosterGroups_rosterID_fk"³åÍ»¡£¸Ã³åÍ»·¢ÉúÓÚÊı¾İ¿â"DebugOpenfire"£¬±í"dbo.ofRoster", column 'rosterID'¡£
+	at net.sourceforge.jtds.jdbc.SQLDiagnostic.addDiagnostic(SQLDiagnostic.java:368)
+	at net.sourceforge.jtds.jdbc.TdsCore.tdsErrorToken(TdsCore.java:2816)
+	at net.sourceforge.jtds.jdbc.TdsCore.nextToken(TdsCore.java:2254)
+	at net.sourceforge.jtds.jdbc.TdsCore.getMoreResults(TdsCore.java:631)
+	at net.sourceforge.jtds.jdbc.JtdsStatement.processResults(JtdsStatement.java:584)
+	at net.sourceforge.jtds.jdbc.JtdsStatement.executeSQL(JtdsStatement.java:546)
+	at net.sourceforge.jtds.jdbc.JtdsPreparedStatement.executeUpdate(JtdsPreparedStatement.java:505)
+	at sun.reflect.GeneratedMethodAccessor14.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.logicalcobwebs.proxool.ProxyStatement.invoke(ProxyStatement.java:100)
+	at org.logicalcobwebs.proxool.ProxyStatement.intercept(ProxyStatement.java:57)
+	at $java.sql.Statement$$EnhancerByProxool$$ad12e8d.executeUpdate(<generated>)
+	at org.jivesoftware.openfire.roster.DefaultRosterItemProvider.insertGroups(DefaultRosterItemProvider.java:308)
+	at org.jivesoftware.openfire.roster.DefaultRosterItemProvider.updateItem(DefaultRosterItemProvider.java:141)
+	at org.jivesoftware.openfire.roster.Roster.updateRosterItem(Roster.java:420)
+	at org.jivesoftware.openfire.handler.IQRosterHandler.removeItem(IQRosterHandler.java:286)
+	at org.jivesoftware.openfire.handler.IQRosterHandler.manageRoster(IQRosterHandler.java:231)
+	at org.jivesoftware.openfire.handler.IQRosterHandler.handleIQ(IQRosterHandler.java:121)
+	at org.jivesoftware.openfire.handler.IQHandler.process(IQHandler.java:65)
+	at org.jivesoftware.openfire.IQRouter.handle(IQRouter.java:375)
+	at org.jivesoftware.openfire.IQRouter.route(IQRouter.java:122)
+	at org.jivesoftware.openfire.spi.PacketRouterImpl.route(PacketRouterImpl.java:76)
+	at org.jivesoftware.openfire.net.StanzaHandler.processIQ(StanzaHandler.java:330)
+	at org.jivesoftware.openfire.net.ClientStanzaHandler.processIQ(ClientStanzaHandler.java:93)
+	at org.jivesoftware.openfire.net.StanzaHandler.process(StanzaHandler.java:295)
+	at org.jivesoftware.openfire.net.StanzaHandler.process(StanzaHandler.java:187)
+	at org.jivesoftware.openfire.nio.ConnectionHandler.messageReceived(ConnectionHandler.java:181)
+	at org.apache.mina.common.support.AbstractIoFilterChain$TailFilter.messageReceived(AbstractIoFilterChain.java:570)
+	at org.apache.mina.common.support.AbstractIoFilterChain.callNextMessageReceived(AbstractIoFilterChain.java:299)
+	at org.apache.mina.common.support.AbstractIoFilterChain.access$1100(AbstractIoFilterChain.java:53)
+	at org.apache.mina.common.support.AbstractIoFilterChain$EntryImpl$1.messageReceived(AbstractIoFilterChain.java:648)
+	at org.apache.mina.common.IoFilterAdapter.messageReceived(IoFilterAdapter.java:80)
+	at org.apache.mina.common.support.AbstractIoFilterChain.callNextMessageReceived(AbstractIoFilterChain.java:299)
+	at org.apache.mina.common.support.AbstractIoFilterChain.access$1100(AbstractIoFilterChain.java:53)
+	at org.apache.mina.common.support.AbstractIoFilterChain$EntryImpl$1.messageReceived(AbstractIoFilterChain.java:648)
+	at org.apache.mina.filter.codec.support.SimpleProtocolDecoderOutput.flush(SimpleProtocolDecoderOutput.java:58)
+	at org.apache.mina.filter.codec.ProtocolCodecFilter.messageReceived(ProtocolCodecFilter.java:185)
+	at org.apache.mina.common.support.AbstractIoFilterChain.callNextMessageReceived(AbstractIoFilterChain.java:299)
+	at org.apache.mina.common.support.AbstractIoFilterChain.access$1100(AbstractIoFilterChain.java:53)
+	at org.apache.mina.common.support.AbstractIoFilterChain$EntryImpl$1.messageReceived(AbstractIoFilterChain.java:648)
+	at org.apache.mina.common.IoFilterAdapter.messageReceived(IoFilterAdapter.java:80)
+	at org.jivesoftware.openfire.plugin.RawPrintFilter.messageReceived(RawPrintFilter.java:66)
+	at org.apache.mina.common.support.AbstractIoFilterChain.callNextMessageReceived(AbstractIoFilterChain.java:299)
+	at org.apache.mina.common.support.AbstractIoFilterChain.access$1100(AbstractIoFilterChain.java:53)
+	at org.apache.mina.common.support.AbstractIoFilterChain$EntryImpl$1.messageReceived(AbstractIoFilterChain.java:648)
+	at org.apache.mina.filter.executor.ExecutorFilter.processEvent(ExecutorFilter.java:239)
+	at org.apache.mina.filter.executor.ExecutorFilter$ProcessEventsRunnable.run(ExecutorFilter.java:283)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at org.apache.mina.util.NamePreservingRunnable.run(NamePreservingRunnable.java:51)
+	at java.lang.Thread.run(Thread.java:744)
+2014.10.09 16:35:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 16:37:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 16:39:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 16:41:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 16:43:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 16:45:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 16:47:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 16:49:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 16:51:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 16:53:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 16:55:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 16:57:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 16:59:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 17:01:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 17:03:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 17:05:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 17:07:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 17:08:36 org.jivesoftware.openfire.update.UpdateManager - Error checking for updates
+java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:339)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:200)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:182)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:579)
+	at java.net.Socket.connect(Socket.java:528)
+	at java.net.Socket.<init>(Socket.java:425)
+	at java.net.Socket.<init>(Socket.java:280)
+	at org.apache.commons.httpclient.protocol.DefaultProtocolSocketFactory.createSocket(DefaultProtocolSocketFactory.java:80)
+	at org.apache.commons.httpclient.protocol.DefaultProtocolSocketFactory.createSocket(DefaultProtocolSocketFactory.java:122)
+	at org.apache.commons.httpclient.HttpConnection.open(HttpConnection.java:707)
+	at org.apache.commons.httpclient.HttpMethodDirector.executeWithRetry(HttpMethodDirector.java:387)
+	at org.apache.commons.httpclient.HttpMethodDirector.executeMethod(HttpMethodDirector.java:171)
+	at org.apache.commons.httpclient.HttpClient.executeMethod(HttpClient.java:397)
+	at org.apache.commons.httpclient.HttpClient.executeMethod(HttpClient.java:323)
+	at org.jivesoftware.openfire.update.UpdateManager.checkForServerUpdate(UpdateManager.java:229)
+	at org.jivesoftware.openfire.update.UpdateManager$1.run(UpdateManager.java:142)
+2014.10.09 17:09:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 17:11:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 17:13:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 17:15:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 17:17:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 17:19:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 17:21:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 17:23:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 17:25:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 17:27:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 17:29:17 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 17:31:18 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 17:33:18 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 17:35:18 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 17:37:18 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 17:39:18 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 17:41:18 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 17:43:18 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 17:45:18 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 17:47:18 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 17:49:18 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 17:51:18 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 17:53:18 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 17:55:18 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 17:57:18 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 17:59:18 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 18:01:18 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 18:03:18 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 18:05:18 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 18:07:18 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 18:09:18 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 18:11:18 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 18:13:18 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 18:15:18 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 18:17:18 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 18:19:18 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 18:21:18 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 18:23:18 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 18:25:18 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 18:27:18 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 18:29:18 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 18:31:18 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 18:33:18 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 18:35:18 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 18:37:18 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 18:39:18 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 18:41:18 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 18:43:18 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 18:45:18 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 18:47:18 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 18:49:18 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 18:51:18 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 18:53:18 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 18:55:18 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 18:57:18 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 18:59:18 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 19:01:18 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 19:03:18 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 19:05:18 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 19:07:18 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 19:09:18 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 19:11:18 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 19:13:18 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 19:15:18 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 19:17:18 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 19:19:18 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 19:21:18 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 19:23:18 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 19:25:18 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 19:27:18 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 19:29:18 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 19:31:18 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 19:33:18 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 19:35:18 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 19:37:18 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 19:39:18 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 19:41:18 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 19:43:18 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 19:45:18 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 19:47:18 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 19:49:18 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 19:51:18 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 19:53:18 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 19:55:18 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 19:57:18 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 19:59:18 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
+2014.10.09 20:01:18 org.jivesoftware.openfire.plugin.gojara.database.DatabaseManager - java.sql.SQLException: ¶ÔÏóÃû 'ofGojaraStatistics' ÎŞĞ§¡£
