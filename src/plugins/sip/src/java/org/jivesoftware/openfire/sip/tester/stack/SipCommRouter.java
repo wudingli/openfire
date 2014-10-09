@@ -22,6 +22,7 @@ package org.jivesoftware.openfire.sip.tester.stack;
 
 import org.jivesoftware.openfire.sip.tester.Log;
 
+import javax.sip.SipException;
 import javax.sip.SipStack;
 import javax.sip.address.Hop;
 import javax.sip.address.Router;
@@ -29,6 +30,7 @@ import javax.sip.address.SipURI;
 import javax.sip.address.URI;
 import javax.sip.header.RouteHeader;
 import javax.sip.message.Request;
+
 import java.util.LinkedList;
 import java.util.ListIterator;
 
@@ -154,5 +156,11 @@ public class SipCommRouter implements Router {
             this.outboundProxy = new SipCommHop(proxy);
         }
     }
+
+	@Override
+	public Hop getNextHop(Request arg0) throws SipException {
+		// TODO Auto-generated method stub
+		return null;
+	}
 
 }
